@@ -26,8 +26,6 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 
 			this.options = _.extend({}, _.result(this, 'options'), _.isFunction(options) ? options.call(this) : options);
 
-			console.log( this.options );
-
 			// this.listenTo(this, "before:show", this.onBeforeShow);
 			// this.listenTo(this, "before:hide", this.onBeforeHide);
 			this.listenTo(this, "shown:view", this.onShownCalled);
