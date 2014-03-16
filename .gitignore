@@ -1,3 +1,5 @@
-*
-!js/
-js/main.js
+*.php
+css/
+images/
+php/
+sources/
