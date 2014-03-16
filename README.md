@@ -1,4 +1,4 @@
 modiphy-dev-js
 ==============
 
-repository for development version of modiphy js library
+repository for core Modiphy Javascript library
