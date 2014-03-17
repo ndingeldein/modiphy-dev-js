@@ -2,6 +2,8 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 
 	var M = modiphy;
 
+	console.log( 'core focused dev');
+
 	App = {
 
 		Models: {},
