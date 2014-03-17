@@ -1,0 +1,149 @@
+body{
+
+	font-family: sans-serif;
+	background-color: #006288;
+
+}
+
+.intro-1{
+
+	visibility: hidden;
+
+}
+
+.header-wrapper{
+	
+	position: fixed;
+	z-index: 99;
+	left: 0;
+	top: 0;
+	width: 100%;
+
+}
+
+.header{
+
+	width: 90%;
+	max-width: 900px;
+	margin: 0 auto;
+
+}
+
+.nav-container{
+
+	text-align: center;
+	background-color: #f26922;
+
+}
+
+.main-nav{
+
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	
+	font-size: 0;
+	display: inline-block;
+
+}
+
+.main-nav > li{
+	
+	display: list-item;
+	float: left;
+	margin: 1em;
+	padding: 0;
+	font-size: 16px;
+
+	color: #FFF;
+
+	-webkit-transition: 0.25s color ease-out;
+	-moz-transition: 0.25s color ease-out;
+	-ms-transition: 0.25s color ease-out;
+	-o-transition: 0.25s color ease-out;
+	transition: 0.25s color ease-out;
+
+}
+
+.main-nav > li > a{
+
+	display: block;
+
+}
+
+.main-nav > li:hover{
+	color: #973401;
+}
+
+.page > .image-holder{
+
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+
+	background-position: center center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+}
+
+.page-wrapper{
+
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+
+}
+
+.page-container{
+
+	position: relative;
+	width: 100%;
+	height: 100%;
+	
+	visibility: hidden;
+
+	/*overflow: hidden;*/	
+
+}
+
+.page{
+	
+	position: relative;
+	height: 100%;
+
+}
+
+.page .content-wrapper{
+	
+	position: relative;	
+	z-index: 1;
+	width: 100%;
+	padding: 12em 0 0 0;
+
+}
+
+.page .content-wrapper > .content{
+
+	width: 90%;
+	max-width: 900px;
+	margin: 0 auto;
+	background-color: #FFF;
+
+}
+
+.ezedit_body{
+
+	padding: 2em 2em 8em 2em;
+
+}

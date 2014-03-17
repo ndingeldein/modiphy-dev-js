@@ -1,0 +1,40 @@
+.ezedit_body{
+	
+	border-style: none;
+	color: #5a5a5a;
+	font-size: 0.875em;
+	line-height: 1.5em;
+	font-weight: 400;
+
+}
+
+.heading{
+	color:#e68f1a;
+	font-size: 2em;
+	font-weight: 400;
+	font-family: 'Audiowide', cursive;
+	display: block;
+	border-bottom: 2px solid #e68f1a;
+	line-height: 1.6em;
+}
+
+.sub_heading{
+	color:#5a5a5a;
+	font-size: 1.25em;
+	font-weight: 700;
+}
+
+.bold_caps {
+	color:#007236;
+	font-weight: 500;
+	text-transform: uppercase;
+	font-size: 1em;
+}
+
+.thin {
+	color:#000000;
+	font-weight: 100;
+	font-size: 1em;
+}
+
+
