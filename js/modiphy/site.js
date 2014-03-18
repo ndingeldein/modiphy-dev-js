@@ -269,33 +269,6 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 
 	});
 
-/**
-
-	TODO:
-	- Figure out if this is a plugin !!!??
-
-**/
-
-
-	M.Mixins.Collections.Playable = function( collection, options ){
-
-		var defaults = {
-
-			isPlaying : true,
-			delay: 5000
-
-		};
-
-		options = _.defaults( {}, options, defaults );
-
-		this.collection = collection;
-
-		this.isPlaying = options.isPlaying;
-		this.delay = options.delay;
-		this.wasPlaying = this.isPlaying;
-
-	};
-
 	return modiphy;
 
 })( modiphy, Backbone, _ );

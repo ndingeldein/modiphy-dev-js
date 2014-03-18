@@ -27,7 +27,7 @@ jquery 1.9 or later must be used for migrate plugin
 <script type="text/javascript"  src="js/modiphy/mixins.js"></script>
 <script type="text/javascript"  src="js/modiphy/core.js"></script>
 
-<script type="text/javascript"  src="js/modiphy/pageView.js"></script>
+<script type="text/javascript"  src="js/modiphy/page.js"></script>
 <script type="text/javascript"  src="js/modiphy/site.js"></script>
 
 <!-- <script src="galleria/galleria-1.2.8.min.js"></script> -->
