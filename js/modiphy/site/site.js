@@ -231,6 +231,7 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 			if( page.get('name') === 'intro' ){
 
 				this.$body.removeClass('home');
+				this.$body.removeClass('inside');
 				this.$body.addClass('intro');
 				TweenMax.killTweensOf( this.$logo);
 				TweenMax.to(this.$logo, 0.5, {autoAlpha:0, onComplete:this.$logo.hide});
@@ -240,7 +241,8 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 			}else if( page.get('name') === 'home' ){
 
 				this.$body.addClass('home');
-				this.$body.removeClass('intro');
+				this.$body.removeClass('inside');
+				this.$body.removeClass('intro');				
 				this.$logo.attr('href', '#intro');
 				TweenMax.killTweensOf( this.$logo);
 				TweenMax.to(this.$logo, 0.5, {autoAlpha:1, delay:1, onStart:this.$logo.show});
