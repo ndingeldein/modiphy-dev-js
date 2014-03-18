@@ -1,5 +1,109 @@
 var modiphy = ( function( modiphy, Backbone, _ ) {
 
+	var M = modiphy;
+
+	M.PageLoader = function(){
+
+	};
+
+	_.extend( M.PageLoader.prototype, {
+
+		load: function( page ){
+
+			console.log( 'load ' + page.get('name') );
+
+			this.stopLoading(page);
+
+			this.page = page;
+
+			this.deferreds = [];
+
+			this.deferreds.push( this.loadHTML( page ) );
+
+			this.deferreds.push( this.loadJSON( page ) );
+
+			return $.when.apply( $, this.deferreds ).done(function(){
+
+				page.get('content').html = arguments[0][1];
+				
+				page.get('content').json = arguments[1];
+
+				console.log(page.get('name') + ' loading finished');
+			}).fail( function(){
+				
+				console.log(page.get('name') + ' loading stopped');
+
+			});
+
+		},
+
+		stopLoading: function( page ){
+
+			_.each( this.deferreds, function( deferred ){
+				deferred.reject();
+			});
+
+			if(this.deferreds){
+				this.deferreds.length = 0;
+			}
+			
+		},
+
+		loadHTML: function( page ){
+
+			var deferred = $.Deferred();
+
+			params = $.deparam.querystring( $.param.querystring( $.param.fragment() ) );
+			
+			params.page = page.get('name');
+			params.layout = page.get('layout');
+			params.title = page.get('title');
+
+			var req = $.get( 'layout/layout.php', params ).done(function( data ){
+
+					deferred.resolve(page, data);
+
+				});
+
+			deferred.fail(function(){
+
+				// console.log( page.get('name') + ' html loading stopped');
+
+			});
+
+			return deferred;
+
+		},
+
+		loadJSON: function( page ){
+
+			var deferred = $.Deferred();
+			
+			$.get( 'json/json.php', {
+
+					page: page.get('name'),
+					type: this.name
+
+				}, 'json')
+
+				.done(function( data ){
+
+					deferred.resolve(data);
+
+				});
+
+			deferred.fail(function(){
+
+				// console.log( page.get('name') + ' json loading stopped');
+
+			});
+
+			return deferred;
+
+		}
+
+	});
+
 	M.PageType = function(name, ViewType){
 
 		this.name = name || 'text';
