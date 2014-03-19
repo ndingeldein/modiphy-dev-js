@@ -3,7 +3,7 @@ modiphy-dev-js
 
 The universal one-stop shop for all things Modiphy code related...
 
-Modiphy JS Core Library
+Modiphy JS Core Library<br>
 Modiphy Site Framework
 Modiphy Starter Files
 
