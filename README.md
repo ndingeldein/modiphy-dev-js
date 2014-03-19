@@ -1,4 +1,12 @@
 modiphy-dev-js
 ==============
 
-Uses Modiphy JS Library to create framework for developing single page websites with Modiphy Gallery Manager and Text Editor
+The universal one-stop shop for all things Modiphy code related...
+
+Modiphy JS Core Library<br>
+Modiphy Site Framework<br>
+Modiphy Starter Files<br>
+
+Will probably eventually split these into different repos, but for now will be using sparse checkout to clone and work on each codebase.
+
+
