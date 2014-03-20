@@ -143,7 +143,7 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 
 		load: function(){
 
-			return $.get( "gallery.php", { 'gid': this.id }).promise();
+			return $.get( "./php/gallery.php", { 'gid': this.id }).promise();
 
 		},
 

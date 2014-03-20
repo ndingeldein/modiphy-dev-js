@@ -21,6 +21,7 @@
 <?php include('./php/scripts.php'); ?>
 
 <script type="text/javascript"  src="./js/modiphy/dev/dev.js"></script>
+<script type="text/javascript"  src="js/custom.js"></script>
 <script type="text/javascript"  src="js/main.js"></script>
 
 <script>
