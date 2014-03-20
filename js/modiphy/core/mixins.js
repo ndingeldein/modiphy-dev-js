@@ -215,8 +215,6 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 		}
 
 	});
-	
-	
 
 	return modiphy;
 

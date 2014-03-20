@@ -35,7 +35,7 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 			this.listenTo(this, "show:view", this.onShow);
 			this.listenTo(this, "hide:view", this.onHide);
 
-			Backbone.View.prototype.constructor.apply( this, arguments );			
+			Backbone.View.prototype.constructor.apply( this, arguments );
 
 		},
 
@@ -45,6 +45,25 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 				return this.deferred;
 			}else{
 				this.deferred = $.Deferred();
+
+				/**
+				
+					TODO:
+					- decide if triggering onShow/onHide is best when _isShowing doesn't change
+					- alternatives: forceShow, forceHide
+					- This is only applicable when
+				
+				**/
+				
+
+				// Making sure to trigger (onShow, onShown) or (onHide, onHidden) without executing corresponding transition
+				if(this._isShowing){
+					this.trigger('show:view');
+					this.trigger('shown:view', this);
+				}else{
+					this.trigger('hide:view');
+					this.trigger('hidden:view', this);
+				}
 				this.deferred.resolve( this );
 				return this.deferred;
 			}

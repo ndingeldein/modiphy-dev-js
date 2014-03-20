@@ -115,6 +115,30 @@ App = (function( App ){
 			});
 
 
+		},
+
+		onIntro: function(){
+
+			
+
+		},
+
+		onHome: function(){
+
+			
+
+		},
+
+		onInterior: function(){
+
+			
+
+		},
+
+		onPageSelected: function( page ){
+
+			//TweenMax.to( this.$body.find('.page .image-holder'), 0.4, {autoAlpha:0} );
+
 		}
 
 	});

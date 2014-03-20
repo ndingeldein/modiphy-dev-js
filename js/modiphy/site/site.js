@@ -170,6 +170,7 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 
 			this.pages.normal.on( 'select:one', this.pageSelected, this );
 			this.pages.overlay.on( 'select:one', this.overlayPageSelected, this );
+
 		},
 
 		pageSelected: function( page ){
@@ -180,9 +181,31 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 
 				this.pageLoader.load( page ).done( _.bind( this.pageLoaded, this ) );
 
+				this.updateNavitems( page );
+
+				switch( page.get('name') ){
+
+					case 'intro':
+
+						this.introPageSelected();
+						break;
+
+					case 'home':
+
+						this.homePageSelected();
+						break;
+
+					default:
+
+						this.interiorPageSelected();
+
+				}
+
 			}
 
-			this.updateElements( page );
+			if( this.onPageSelected ){
+				this.onPageSelected();
+			}
 
 		},
 
@@ -226,40 +249,61 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 
 		},
 
-		updateElements: function( page ){
+		introPageSelected: function(){
 
-			if( page.get('name') === 'intro' ){
+			this.$body.removeClass('home');
+			this.$body.removeClass('inside');
+			this.$body.addClass('intro');
+			
+			this.$logo.attr('href', '#intro');
+			this.homeButton.hide();
 
-				this.$body.removeClass('home');
-				this.$body.removeClass('inside');
-				this.$body.addClass('intro');
-				TweenMax.killTweensOf( this.$logo);
-				TweenMax.to(this.$logo, 0.5, {autoAlpha:0, onComplete:this.$logo.hide});
-				
-				this.homeButton.hide();
-
-			}else if( page.get('name') === 'home' ){
-
-				this.$body.addClass('home');
-				this.$body.removeClass('inside');
-				this.$body.removeClass('intro');				
-				this.$logo.attr('href', '#intro');
-				TweenMax.killTweensOf( this.$logo);
-				TweenMax.to(this.$logo, 0.5, {autoAlpha:1, delay:1, onStart:this.$logo.show});
-
-				this.homeButton.hide();
-
-			}else{
-
-				this.$body.removeClass('home');
-				this.$body.removeClass('intro');
-				this.$body.addClass('inside');
-				this.$logo.attr('href', '#home');
-				TweenMax.killTweensOf( this.$logo);
-				TweenMax.to(this.$logo, 0.5, {autoAlpha:1, delay:1, onStart:this.$logo.show});
-				this.homeButton.show();
-
+			if(this.onIntro){
+				this.onIntro();
 			}
+
+		},
+
+		homePageSelected: function(){
+
+			this.$body.addClass('home');
+			this.$body.removeClass('inside');
+			this.$body.removeClass('intro');
+
+			this.$logo.attr('href', '#intro');
+			this.homeButton.hide();
+
+			if(this.onHome){
+				this.onHome();
+			}
+
+		},
+
+		interiorPageSelected: function(){
+
+			this.$body.removeClass('home');
+			this.$body.removeClass('intro');
+			this.$body.addClass('inside');
+
+			this.$logo.attr('href', '#home');
+			this.homeButton.show();
+
+			if(this.onInterior){
+				this.onInterior();
+			}
+
+		},
+
+		updateNavitems: function(page){
+
+			var that = this;
+			this.navitems.each(function(model, index){
+				if(model.get('field01') == page.get('name')){
+					that.nav.children.findByIndex(index).$el.addClass('selected');
+				}else{
+					that.nav.children.findByIndex(index).$el.removeClass('selected');
+				}
+			});
 
 		},
 
