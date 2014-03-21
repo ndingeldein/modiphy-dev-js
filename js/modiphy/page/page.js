@@ -82,7 +82,7 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 			$.get( 'json/json.php', {
 
 					page: page.get('name'),
-					type: this.name
+					type: page.get('type')
 
 				}, 'json')
 
