@@ -10,7 +10,6 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 	_.mixinEvent( M.NavitemView.prototype, M.Mixins.Events.Click.Param );
 
 	M.IntroPageView = M.PageView.extend({
-
 		
 		onBeforeRenderChildren: function(){
 
@@ -20,20 +19,27 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 
 		showTransition: function(){
 
+			var that = this;
+			this.$el.imagesLoaded( _.bind( this.preloaded, this ));
+			
+
+		},
+
+		preloaded: function(){
+
 			TweenMax.to( this.$intro1, 1, {autoAlpha:1, onComplete: this.triggerShown });
 
 		},
 
 		onShown: function(){
-			console.log( 'TO' );
-			console.log( this.options );
-			this.timeoutId = setTimeout( this.goHome, 500);
+		
+			this.timeoutId = setTimeout( this.hide, 500);
 
 		},
 
 		hideTransition: function(){
 
-			TweenMax.to( this.$intro1, 1, {autoAlpha:1, onComplete: this.triggerHidden });
+			TweenMax.to( this.$intro1, 1, {autoAlpha:0, onComplete: this.triggerHidden });
 
 		},
 
@@ -48,7 +54,8 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 
 		onHidden: function(){
 
-			
+			TweenMax.killChildTweensOf( this.$el );
+			this.goHome();
 
 		},
 

@@ -6,6 +6,6 @@
 
 <link href="./css/main.css" rel="stylesheet" type="text/css" />
 <link href="./css/tooltipster.css" rel="stylesheet" type="text/css" />
-<link href="./ezedit.css" rel="stylesheet" type="text/css" />
+<link href="./css/ezedit.css" rel="stylesheet" type="text/css" />
 
 <script src="./js/vendor/modernizr.js"></script>
