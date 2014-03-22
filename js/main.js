@@ -99,24 +99,6 @@ App = (function( App ){
 			
 		},
 
-		updateNavitems: function(page){
-
-			if(page.get('name') === 'food'){
-				TweenMax.to( this.$body.find('.page .image-holder'), 0.4, {autoAlpha:0} );
-			}
-
-			var that = this;
-			this.navitems.each(function(model, index){
-				if(model.get('field01') == page.get('name')){
-					that.nav.children.findByIndex(index).$el.addClass('selected');
-				}else{
-					that.nav.children.findByIndex(index).$el.removeClass('selected');
-				}
-			});
-
-
-		},
-
 		onIntro: function(){
 
 			

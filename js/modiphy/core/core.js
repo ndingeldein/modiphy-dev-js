@@ -13,6 +13,12 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 
 	};
 
+	// M.View options
+	// var modiphyViewOptions = ['templateId'];
+	// Backbone.View options
+	// var viewOptions = ['model', 'collection', 'el', 'id', 'attributes', 'className', 'tagName', 'events'];
+
+	// viewOptions = _.union( viewOptions, modiphyViewOptions );
 
 	M.View = Backbone.View.extend({
 
@@ -28,12 +34,26 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 
 			this.options = _.extend({}, _.result(this, 'options'), _.isFunction(options) ? options.call(this) : options);
 
-			// this.listenTo(this, "before:show", this.onBeforeShow);
-			// this.listenTo(this, "before:hide", this.onBeforeHide);
 			this.listenTo(this, "shown:view", this.onShownCalled);
 			this.listenTo(this, "hidden:view", this.onHiddenCalled);
 			this.listenTo(this, "show:view", this.onShow);
-			this.listenTo(this, "hide:view", this.onHide);
+			this.listenTo(this, "hide:view", this.onHide);			
+
+			/**
+			
+				TODO:
+				- merge M.View options with Backbone.View options
+				- right now seems impossible without having to override constructor
+				- if merged after constructor then initialize will have already been called
+			
+			**/
+			
+			// this.cid = _.uniqueId('view');
+			// options || (options = {});
+			// _.extend(this, _.pick(options, viewOptions));
+			// this._ensureElement();
+			// this.initialize.apply(this, arguments);
+			// this.delegateEvents();
 
 			Backbone.View.prototype.constructor.apply( this, arguments );
 
