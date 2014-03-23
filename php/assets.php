@@ -4,6 +4,9 @@
 <link href="./css/normalize.css" rel="stylesheet" type="text/css" />
 <link href="./css/html5bp.css" rel="stylesheet" type="text/css" />
 
+<link href="./css/icons/mono.css" rel="stylesheet" type="text/css" />
+<!-- <link href="./css/icons/flaticon.css" rel="stylesheet" type="text/css" /> -->
+
 <link href="./css/main.css" rel="stylesheet" type="text/css" />
 <link href="./css/tooltipster.css" rel="stylesheet" type="text/css" />
 <link href="./css/ezedit.css" rel="stylesheet" type="text/css" />
