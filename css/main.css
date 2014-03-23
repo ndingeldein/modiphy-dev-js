@@ -5,10 +5,39 @@ body{
 
 }
 
+.intro.page{
+
+	position: relative;
+	width: 100%;
+	height: 100%;
+	font-size: 0;
+	text-align: center;
+	visibility: visible;
+
+}
+
+.intro.page:before{
+
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+
+
+}
+
+.intro-logo{
+	
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -20px;
+
+}
+
 .intro-1{
-
+	position: relative;
 	visibility: hidden;
-
 }
 
 .header-wrapper{
