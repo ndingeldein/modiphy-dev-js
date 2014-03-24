@@ -89,8 +89,6 @@ App = (function( App ){
 
 			_.extend( this.overlayViewer, M.Mixins.Transitions.Fader );
 
-			this.pages.normal.on('select:one', this.updateNavitems, this);
-
 			var that = this;
 
 			Backbone.history.start();
