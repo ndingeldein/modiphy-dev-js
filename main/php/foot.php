@@ -6,7 +6,6 @@
 	
 ?>
 
-
 <script>
 (function(){
 
@@ -45,6 +44,8 @@
 })();
 
 </script>
+
+<?php include('../analyticstracking.php') ?>
 
 </body>
 </html>
