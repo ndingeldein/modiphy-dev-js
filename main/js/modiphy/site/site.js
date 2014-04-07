@@ -187,24 +187,24 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 
 					case 'intro':
 
-						this.introPageSelected();
+						this.introPageSelected( page );
 						break;
 
 					case 'home':
 
-						this.homePageSelected();
+						this.homePageSelected( page );
 						break;
 
 					default:
 
-						this.interiorPageSelected();
+						this.interiorPageSelected( page );
 
 				}
 
 			}
 
 			if( this.onPageSelected ){
-				this.onPageSelected();
+				this.onPageSelected( page );
 			}
 
 		},
