@@ -19,7 +19,7 @@ $ua = $config['analytics_tracking_id'];
 
 	(function() {
 
-		$(window).hashchange( function(){
+		$(window).on( 'hashchange', function(){
 
 			_gaq.push(['_trackPageview',location.pathname + location.search  + location.hash]);
 
