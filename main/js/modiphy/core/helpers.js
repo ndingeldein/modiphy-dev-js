@@ -172,9 +172,9 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 			maxHeight: item.height
 		};
 
-		options = _.defaults( options, defaults);
+		options.hash = _.defaults( options.hash, defaults);
 
-		return M.imagePrefix + item.id + '&maxwidth=' + options.maxWidth + '&maxHeight=' + options.maxHeight;
+		return M.imagePrefix + item.id + '&maxwidth=' + options.hash.maxWidth + '&maxheight=' + options.hash.maxHeight;
 
 
 	});
