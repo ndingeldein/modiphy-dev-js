@@ -59,22 +59,19 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 
 		_getDeferred: function(){
 
-			if( this.deferred ){
+			if( this.deferred && this.deferred.state() === 'pending' ){
+
 				return this.deferred;
-			}else{
+
+			}
+
+			if( !this.deferred ){
+
 				this.deferred = $.Deferred();
+				
+			}
 
-				/**
-				
-					TODO:
-					- decide if triggering onShow/onHide is best when _isShowing doesn't change
-					- alternatives: forceShow, forceHide
-					- This is only applicable when
-				
-				**/
-				
-
-				// Making sure to trigger (onShow, onShown) or (onHide, onHidden) without executing corresponding transition
+			if( !this.deferred.state() !== 'rejected'){
 				if(this._isShowing){
 					this.trigger('show:view');
 					this.trigger('shown:view', this);
@@ -82,9 +79,9 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 					this.trigger('hide:view');
 					this.trigger('hidden:view', this);
 				}
-				this.deferred.resolve( this );
-				return this.deferred;
 			}
+			
+			return this.deferred;
 
 		},
 

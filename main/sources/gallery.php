@@ -1,0 +1,1 @@
+<div class="gallery-thumbs clearfix"></div>

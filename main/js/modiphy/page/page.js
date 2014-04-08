@@ -319,6 +319,10 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 
 				this.show().then( this.currentView.show );
 
+			}else{
+
+				this.trigger('emptied:viewer');
+
 			}
 
 		},

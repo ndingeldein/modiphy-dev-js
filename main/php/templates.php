@@ -31,4 +31,20 @@ field01: {{ field01 }}<br>
 
 </script>
 
+<script id="gallery-thumb-template" type="text/x-handlebars-template">
+
+	<div class="img-holder">
+
+		<img src="{{ imageUrl item maxWidth=0 maxHeight=120 }}">
+
+	</div>
+
+</script>
+
+<script id="photo-gallery-template" type="text/x-handlebars-template">
+	<a class="close-button"><img src="./images/close.png"></a>
+	<div class="bg"></div>
+
+</script>
+
 </div>

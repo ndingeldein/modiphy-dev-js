@@ -101,8 +101,7 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 
 				}
 
-			}else{
-				
+			}else{				
 				
 				this.pages.overlay.deselect();
 				this.site.overlayViewer.setView( null );
@@ -128,6 +127,8 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 		this.overlayViewer = new M.PageViewer({
 			el: '.overlay-page-container'
 		});
+
+		this.overlayViewer.on('emptied:viewer', this.overlayEmptied, this );
 
 		this.pageLoader = new M.PageLoader();
 		this.overlayPageLoader = new M.PageLoader();
@@ -170,6 +171,12 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 
 			this.pages.normal.on( 'select:one', this.pageSelected, this );
 			this.pages.overlay.on( 'select:one', this.overlayPageSelected, this );
+
+			
+			this.overlayPageWrapper = new M.OverlayPageWrapper({
+				collection: this.pages.overlay
+			});
+
 
 		},
 
@@ -217,6 +224,8 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 
 				this.overlayPageLoader.load( page ).done( _.bind( this.overlayPageLoaded, this ) );
 
+				this.overlayPageWrapper.show();
+
 			}
 
 		},
@@ -238,6 +247,12 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 			var pageView = this.buildPageView( page );
 
 			this.overlayViewer.setView( pageView );
+
+		},
+
+		overlayEmptied: function(){
+
+			this.overlayPageWrapper.hide();
 
 		},
 
