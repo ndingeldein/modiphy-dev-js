@@ -101,8 +101,7 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 
 				}
 
-			}else{
-				
+			}else{				
 				
 				this.pages.overlay.deselect();
 				this.site.overlayViewer.setView( null );
@@ -128,6 +127,8 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 		this.overlayViewer = new M.PageViewer({
 			el: '.overlay-page-container'
 		});
+
+		this.overlayViewer.on('emptied:viewer', this.overlayEmptied, this );
 
 		this.pageLoader = new M.PageLoader();
 		this.overlayPageLoader = new M.PageLoader();
@@ -171,6 +172,12 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 			this.pages.normal.on( 'select:one', this.pageSelected, this );
 			this.pages.overlay.on( 'select:one', this.overlayPageSelected, this );
 
+			
+			this.overlayPageWrapper = new M.OverlayPageWrapper({
+				collection: this.pages.overlay
+			});
+
+
 		},
 
 		pageSelected: function( page ){
@@ -187,24 +194,24 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 
 					case 'intro':
 
-						this.introPageSelected();
+						this.introPageSelected( page );
 						break;
 
 					case 'home':
 
-						this.homePageSelected();
+						this.homePageSelected( page );
 						break;
 
 					default:
 
-						this.interiorPageSelected();
+						this.interiorPageSelected( page );
 
 				}
 
 			}
 
 			if( this.onPageSelected ){
-				this.onPageSelected();
+				this.onPageSelected( page );
 			}
 
 		},
@@ -216,6 +223,8 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 				$('body, html').animate({'scrollTop': 0}, {'duration':600, 'easing':'swing'});
 
 				this.overlayPageLoader.load( page ).done( _.bind( this.overlayPageLoaded, this ) );
+
+				this.overlayPageWrapper.show();
 
 			}
 
@@ -238,6 +247,12 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 			var pageView = this.buildPageView( page );
 
 			this.overlayViewer.setView( pageView );
+
+		},
+
+		overlayEmptied: function(){
+
+			this.overlayPageWrapper.hide();
 
 		},
 

@@ -18,7 +18,7 @@ App = (function( App ){
 
 			this.navitems = M.getCatItemsByTitle( this.gallery, 'Nav' );
 			this.pageitems = M.getCatItemsByTitle( this.gallery, 'Pages' );
-			
+
 			this.setPages(
 				this.pageitems.toJSON(),
 				this.navitems.toJSON()
@@ -26,6 +26,9 @@ App = (function( App ){
 
 			this.pageTypes.add( new M.PageType('text', M.PageView) );
 			this.pageTypes.add( new M.PageType('intro', M.IntroPageView) );
+			this.pageTypes.add( new M.PageType('gallery_thumbs', M.GalleryThumbsPageView) );
+			this.pageTypes.add( new M.PageType('photo_gallery', M.PhotoGalleryPageView) );
+
 			
 			var niViewOptions = {
 
@@ -116,6 +119,8 @@ App = (function( App ){
 		},
 
 		onPageSelected: function( page ){
+
+			console.log( page.get('type') );
 
 			//TweenMax.to( this.$body.find('.page .image-holder'), 0.4, {autoAlpha:0} );
 

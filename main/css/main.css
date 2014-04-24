@@ -176,3 +176,32 @@ body{
 	padding: 2em 2em 8em 2em;
 
 }
+
+.gallery-thumbs{
+
+	position: relative;
+
+}
+
+.gallery-thumb{
+
+	float: left;
+	margin: 1em 2em 1em 0;
+	cursor: pointer;
+
+}
+
+.gallery-thumb:hover .img-holder{
+	border-color: #000;
+}
+
+.gallery-thumb .img-holder{
+	
+	border: 2px solid rgba(0,0,0,0.5);
+	height: 120px;
+
+}
+
+.gallery-thumb .img-holder img{
+	vertical-align: bottom;
+}

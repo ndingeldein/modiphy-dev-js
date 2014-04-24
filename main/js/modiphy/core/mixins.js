@@ -183,7 +183,7 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 
 			clearTimeout( this.timeoutId );
 
-			var i = this.selected ? this.indexOf( this.selected ) : -1;
+			var i = this.selected ? this.indexOf( this.selected ) : this.collection.length;
 			i--;
 
 			if( i < 0 ){

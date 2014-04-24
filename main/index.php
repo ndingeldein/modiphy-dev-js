@@ -16,12 +16,21 @@
 
 </div>
 
-<div class="overlay-page-container"></div>
+<div class="overlay-page-wrapper">
+	<div class="bg"></div>
+	<a class="close-button">
+		<img src="./images/close.png" alt="">
+	</a>
+	<div class="overlay-page-container"></div>
+</div>
 
 <?php include('./php/scripts.php'); ?>
 
 <script type="text/javascript"  src="./js/modiphy/dev/dev.js"></script>
 <script type="text/javascript"  src="js/custom.js"></script>
+
+<script type="text/javascript"  src="js/modiphy/dev/photo-gallery.js"></script>
+
 <script type="text/javascript"  src="js/main.js"></script>
 
 <script>
