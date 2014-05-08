@@ -1,13 +1,16 @@
 <?php
 
-//require_once("/usr/local/lib/php/mobi.php");
+require_once("./mobi/lib/detect_mobile.php");
 
-header("location:main/");
+if(isMobile()){
+	header("Location:mobi/");
+}else{
+	header("Location:main/");
+}
 
 //header("location:cs/");
 
 ?>
-
 
 <div id="Layer1" style="position:absolute; width:700px; height:387px; z-index:1; top: -1700px;">
 

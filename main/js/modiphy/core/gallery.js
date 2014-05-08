@@ -101,7 +101,7 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 				linkField = 'link01';
 			}
 
-			return this[linkField] ? this[linkField] : defaultUrl;
+			return this.get(linkField) ? this.get(linkField) : defaultUrl;
 
 		},
 
@@ -114,7 +114,7 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 				targetField = 'target01';
 			}
 
-			return this[targetField] ? this[targetField] : defaultUrl;
+			return this.get(targetField) ? this.get(targetField) : defaultTarget;
 
 		}
 

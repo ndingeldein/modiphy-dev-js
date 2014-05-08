@@ -9,6 +9,7 @@
 $config = array(
 
 	'site_id' => 603,
+	'mobile_site_id' => 622,
 	'photo_gallery_id' => 604,
 	'analytics_tracking_id' => 'UA-XXXXXXX-XX'
 
