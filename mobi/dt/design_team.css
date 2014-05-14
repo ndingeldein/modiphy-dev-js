@@ -1,0 +1,40 @@
+/*
+Image Styles
+
+all images need to be saved with dimensions twice the size of desired display size
+and then resized with css to the desired display size
+
+ex: 
+
+Image mocked up: 100 x 50
+Should be saved: 200 x 100
+Image style   : 
+
+.selector img {
+	width: 100px;
+	height: 50px;
+}
+
+*/
+
+.intro-logo img{
+	width: 398px;
+	height: 500px;
+}
+
+.header .logo img{	
+	width: 159px;
+	height: 29px;
+}
+
+.home .logo img{
+	width: 246px;
+	height: 310px;
+}
+
+.close-button img{
+	width: 50px;
+	height: 50px;
+}
+
+

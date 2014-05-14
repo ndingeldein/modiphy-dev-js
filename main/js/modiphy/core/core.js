@@ -35,8 +35,8 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 			this.listenTo(this, "shown:view", this.onShownCalled);
 			this.listenTo(this, "hidden:view", this.onHiddenCalled);
 			this.listenTo(this, "show:view", this.onShow);
-			this.listenTo(this, "hide:view", this.onHide);			
-
+			this.listenTo(this, "hide:view", this.onHide);
+			
 			/**
 			
 				TODO:

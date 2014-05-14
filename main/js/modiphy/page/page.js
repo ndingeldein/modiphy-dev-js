@@ -53,6 +53,8 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 
 			var deferred = $.Deferred();
 
+			console.log();
+
 			params = $.deparam.querystring( $.param.querystring( $.param.fragment() ) );
 			
 			params.page = page.get('name');
@@ -232,7 +234,7 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 		el: '.page-container',
 
 		initialize: function(){
-
+			
 			this.children = new Backbone.ChildViewContainer();
 
 		},

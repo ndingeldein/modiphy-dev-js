@@ -168,13 +168,13 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 	Handlebars.registerHelper( 'imageUrl', function( item, options){
 
 		defaults = {
-			maxWidth: item.width,
-			maxHeight: item.height
+			maxwidth: item.width,
+			maxheight: item.height
 		};
 
 		options.hash = _.defaults( options.hash, defaults);
 
-		return M.imagePrefix + item.id + '&maxwidth=' + options.hash.maxWidth + '&maxheight=' + options.hash.maxHeight;
+		return M.imagePrefix + item.id + '&maxwidth=' + options.hash.maxwidth + '&maxheight=' + options.hash.maxheight;
 
 
 	});
@@ -219,6 +219,14 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 		var ret = item.width/2 - 29;
 
 		return ret;
+
+	});
+
+	Handlebars.registerHelper( 'socialIcon', function( item ){
+
+		var result = item.field02.replace('&amp;', '&');
+
+		return new Handlebars.SafeString(result);
 
 	});
 
