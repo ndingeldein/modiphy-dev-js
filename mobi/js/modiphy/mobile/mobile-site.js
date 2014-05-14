@@ -85,7 +85,7 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 	M.Site = function( options ){
 
 		var defaults = {
-			
+			pathToMain: '../main/'
 		};
 
 		this.options = _.defaults( {}, options, defaults );
@@ -94,7 +94,9 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 		this.pageTypes = new M.PageTypes();
 
 		this.pageViewer = new M.PageViewer();
-		this.pageLoader = new M.PageLoader();
+		this.pageLoader = new M.PageLoader({
+			pathToMain: this.options.pathToMain
+		});
 
 		this.$body = $('body');
 
@@ -105,8 +107,8 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 	_.extend( M.Site.prototype, {
 
 		load: function(){
-
-			return $.get( "../main/php/gallery.php", { 'gid': this.id }).promise();
+			
+			return $.get( this.options.pathToMain + 'php/gallery.php', { 'gid': this.id }).promise();
 
 		},
 

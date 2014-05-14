@@ -1,36 +1,43 @@
 <?php require_once("../main/dt/config.php"); ?>
-<?php require_once("../main/php/db.php"); ?>
+<?php require_once("../" . $config['main_directory'] . "/php/db.php"); ?>
 <?php require_once("./lib/helpers.php"); ?>
 
 <?php include('./layout/head.php') ?>
 
-<?php include('./layout/nav.php') ?>
+<div class="wrapper">
 
-<div class="page-wrapper">
+	<?php include('./layout/nav.php') ?>
 
-	
-	<?php include('./layout/header.php') ?>
+	<div class="page-wrapper">
 
-
-	<div class="page-container">
 		
-	</div>
+		<?php include('./layout/header.php') ?>
 
+
+		<div class="page-container">
+			
+		</div>
+
+	</div>
+	
 </div>
 
 <?php include('./layout/templates.php'); ?>
 
 <?php include('./layout/scripts.php'); ?>
 
-<script type="text/javascript"  src="../main/js/modiphy/dev/dev.js"></script>
+<script type="text/javascript"  src="../<?php echo $config['main_directory']; ?>/js/modiphy/dev/dev.js"></script>
 <script type="text/javascript"  src="js/main.js"></script>
+
+
 
 <script>
 
 (function(){
-	
+
 	var options = {
-		siteId: <?php echo $config['mobile_site_id']; ?>
+		siteId: <?php echo $config['mobile_site_id']; ?>,
+		pathToMain: '../<?php echo $config["main_directory"]; ?>/'
 	};
 	
 	App.start( options );

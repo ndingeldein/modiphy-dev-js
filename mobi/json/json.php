@@ -1,6 +1,6 @@
 <?php header('Content-type: application/json'); ?>
 <?php require_once("../../main/dt/config.php"); ?>
-<?php require_once("../../main/php/db.php"); ?>
+<?php require_once("../../" . $config['main_directory'] . "/php/db.php"); ?>
 <?php require_once("../lib/helpers.php"); ?>
 <?php
 

@@ -1,5 +1,5 @@
 <?php require_once("../../main/dt/config.php"); ?>
-<?php require_once("../../main/php/db.php"); ?>
+<?php require_once("../../" . $config['main_directory'] . "/php/db.php"); ?>
 <?php require_once("../lib/helpers.php"); ?>
 
 <?php
@@ -13,7 +13,7 @@
 	
 	if (!file_exists($layout_escape.".php")) {
 
-	   include("default.php");
+		include("default.php");
 
 	}else {
 		include($layout_escape . ".php");

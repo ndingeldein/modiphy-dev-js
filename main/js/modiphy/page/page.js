@@ -2,7 +2,13 @@ var modiphy = ( function( modiphy, Backbone, _ ) {
 
 	var M = modiphy;
 
-	M.PageLoader = function(){
+	M.PageLoader = function( options ){
+
+		var defaults = {
+			pathToMain: '../main/'
+		};
+
+		this.options = _.defaults( {}, options, defaults );
 
 	};
 

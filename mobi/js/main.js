@@ -1,5 +1,6 @@
 App = (function( App ){
 
+	
 	_.extend( M.Site.prototype, {
 		init: function(){
 
@@ -30,14 +31,14 @@ App = (function( App ){
 			);
 
 			this.pageTypes.add( new M.PageType('text', M.PageView) );
-			this.pageTypes.add( new M.PageType('intro', M.IntroPageView) );
+			this.pageTypes.add( new M.PageType('intro', M.MobileIntroPageView) );
 			this.pageTypes.add( new M.PageType('home', M.MobileHomePageView) );
 
 			var niViewOptions = {
 
 				tagName: 'li',
 				className: 'navitem',
-				templateId: 'ni-template'
+				templateId: 'main-ni-template'
 
 			};
 
@@ -71,6 +72,7 @@ App = (function( App ){
 			_.extend( this.pageViewer, M.Mixins.Transitions.Fader );
 
 			this.nav.render();
+			this.socialNav.render();
 
 			MBP.scaleFix();
 			MBP.enableActive();
@@ -79,8 +81,6 @@ App = (function( App ){
 
 			Backbone.history.start();
 
-			
-			
 		},
 
 		onIntro: function(){

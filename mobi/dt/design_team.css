@@ -1,7 +1,15 @@
 /*
+Center header logo vertically
+*/
+
+.header .logo{
+	margin-top: 1.125em;
+}
+
+/*
 Image Styles
 
-all images need to be saved with dimensions twice the size of desired display size
+All images need to be saved with dimensions twice the size of desired display size
 and then resized with css to the desired display size
 
 ex: 
@@ -17,24 +25,159 @@ Image style   :
 
 */
 
-.intro-logo img{
-	width: 398px;
-	height: 500px;
-}
-
 .header .logo img{	
-	width: 159px;
-	height: 29px;
-}
-
-.home .logo img{
-	width: 246px;
-	height: 310px;
+	width: 91px;
+	height: 48px;
 }
 
 .close-button img{
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 28px;
 }
 
+/*
 
+Home Logo & Intro Logo
+
+Set percentage width to control height of logo so navitems are not pushed down too far on home.
+Set max-width to restrict width on larger screens.
+Save logos twice the size of max-width.
+
+*/
+
+.intro-logo img{
+	width: 80%;
+	max-width: 365px;
+}
+
+.home .logo img{	
+	width: 60%;
+	max-width: 300px;
+}
+
+/*
+
+BG Image
+
+*/
+
+/* Pattern */
+
+.intro.page, .home.page{
+	background-image: url(../images/bg.jpg);
+	background-repeat: repeat;
+	background-position: 0 0;
+}
+
+/* Color 
+/*.intro.page, .home.page{
+	background-color: #336699;
+}*/
+
+/* Cover */
+/*.intro.page, .home.page{
+	background-image: url(../images/bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+}*/
+
+/*
+Home Nav
+*/
+
+.home-nav > li > a{
+	background-color: #F26922;
+	color: #FFF4CB !important;
+}
+
+.home-nav > li > a:active{
+	/*background-color: #444;*/
+	color: #973401 !important;
+}
+
+/*
+Info
+*/
+
+.info{
+	color: #FFF4CB;
+}
+
+/*Directions*/
+.info a:link, .info a:visited, .info a:active{   
+    color: #FFF;
+}
+
+.info a:active{
+	color: #FFF4CB;
+}
+
+/*Social Nav*/
+
+.social-nav > li{
+	color: #FFF4CB;
+}
+
+.social-nav > li:active{
+	color: #F26922;
+}
+
+/*
+Header
+*/
+
+.header{	
+	background-color: #006288;
+}
+
+/*Page Title*/
+.page h1{
+	color: #222;
+}
+
+/*
+Slide Out Nav Container
+*/
+
+.nav-wrapper{
+	background-color: #F26922;
+}
+
+/*
+	Body BG color needs to match slide out nav bg
+*/
+body{
+	background: #F26922;
+}
+
+/*Close Button*/
+
+.close-button{
+	color: #FFF;
+}
+
+.close-button:active{
+	color: #aaa;
+}
+
+/*Main Nav*/
+
+.main-nav > li > a:active{
+	
+	color: #FFF !important;
+	background-color: rgba(0,0,0,0.25);
+
+}
+
+.main-nav .arrow{
+	color: #000;	
+}
+
+.main-nav > li > a:active .arrow{
+
+	color: #F00;
+	margin-right: 1em;
+
+}
