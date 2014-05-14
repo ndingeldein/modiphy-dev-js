@@ -1,7 +1,6 @@
 body{
 
 	font-family: sans-serif;
-	overflow-x: hidden;
 	background: #222;
 
 }
@@ -43,7 +42,8 @@ body{
 
 .nav-wrapper{
 	
-	height: 100%;
+	height: auto;
+	min-height: 100%;
 	width: 0;
 	overflow: hidden;
 	background: #222;
@@ -52,11 +52,17 @@ body{
 	top: 0;
 	z-index: 99;
 
+	padding: 5em 0 4em 0;
+
 	-webkit-transition: 0.3s width ease-out;
 	-moz-transition: 0.3s width ease-out;
 	-ms-transition: 0.3s width ease-out;
 	-o-transition: 0.3s width ease-out;
 	transition: 0.3s width ease-out;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .nav-container{
@@ -69,9 +75,11 @@ body{
 	left: 0;
 	top: 0;
 	width: 100%;
-	min-height: 100%;
-	
-	background: #FFF;
+	height: 100%;
+	z-index: 2;
+
+	width: 100%;
+	background-color: #FFF;
 
 	-webkit-transition: 0.3s left ease-out;
 	-moz-transition: 0.3s left ease-out;
@@ -95,8 +103,6 @@ body{
 	width: 100%;
 	height: 100%;
 
-	background: #FFF;
-	
 	visibility: hidden;
 
 	/*overflow: hidden;*/	
@@ -129,16 +135,14 @@ body{
 
 .home.page{
 
-	background-image: url(../images/bg.jpg);
-	background-repeat: no-repeat;
-	background-position: center center;
-	-webkit-background-size: cover;
-	background-size: cover;
-
 	text-align: center;
 
 	padding: 0 0 4em 0;
 
+}
+
+.default.page{
+	background: #FFF;
 }
 
 .home.page .logo{
@@ -188,10 +192,6 @@ body{
 	background-color: #444;
 }
 
-.info{
-
-}
-
 .info a:link, .info a:visited, .info a:active{
     text-decoration: underline;
     color: #000;
@@ -201,11 +201,11 @@ body{
 	display: inline-block;
 }
 
-.info .phone{
+.home .info .phone{
 	margin-right: 0.25em;
 }
 
-.info .directions{
+.home .info .directions{
 	margin-left: 0.25em;
 }
 
@@ -213,14 +213,29 @@ body{
 	color: #333;
 }
 
+.nav-wrapper .info .phone, .nav-wrapper .info .directions{
+	font-size: 1.125em;
+}
+
+.nav-wrapper .info{
+	padding: 1em 0 0 1em;
+	min-width: 320px;
+}
+
+.nav-wrapper .social-nav{
+	padding-left: 1em;
+}
+
+
 .social-nav{
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	min-width: 320px;
 }
 
 .social-nav > li{
-	margin: 0 0 0 0.125em;
+	margin: 0;
 	padding: 0;
 	display: inline-block;
 	font-size: 2.5em;
@@ -231,26 +246,33 @@ body{
 	transition: 0.25s ease-out color;
 }
 
-.social-nav > li:first-child{
-	margin-right: 0;
+.home .social-nav > li{
+	margin-left: 0.125em;
 }
 
-.social-nav > li:hover{
-	color: #444;
+.nav-wrapper .social-nav > li{
+	margin-right: 0.125em;
+	font-size: 2.5em;
+}
+
+.home .social-nav > li:first-child{
+	margin-right: 0;
 }
 
 .ezedit_body{
 
 	padding: 2em 10% 8em;
+	min-height: 24em;
 
 }
 
 .header{
 	
 	background-color: #444;
-	height: 5em;
+	height: 0;
 	overflow: hidden;
 	width: 100%;
+	height: 0;
 
 	-webkit-transition: 0.3s height ease-out;
 	-moz-transition: 0.3s height ease-out;
@@ -260,8 +282,8 @@ body{
 
 }
 
-.home .header{
-	height: 0;
+.inside .header{
+	height: 5em;
 }
 
 .menu-button{
@@ -312,6 +334,16 @@ body{
 	display: block;
 	float: right;
 	margin: 1.675em 1.5em 0 0;
+
+	-webkit-transition: 0.25s opacity ease-out;
+	-moz-transition: 0.25s opacity ease-out;
+	-ms-transition: 0.25s opacity ease-out;
+	-o-transition: 0.25s opacity ease-out;
+	transition: 0.25s opacity ease-out;
+}
+
+.header .logo:active{
+	opacity: 0.7;
 }
 
 .page h1{
@@ -320,12 +352,11 @@ body{
 }
 
 .main-nav{
+
 	width: 100%;
 	list-style: none;
-	margin: 2em 0 0;
+	margin: -1px 0 0;
 	padding: 0;
-
-	border-right: 1em solid #000;
 
 }
 
@@ -334,10 +365,10 @@ body{
 	margin: 0;
 	padding: 0;
 
-	min-width: 320px;
+	min-width: 230px;
 
 	color: #dedede;
-	text-transform: uppercase;
+	
 	width: 100%;
 
 	border-bottom: 1px solid #666;
@@ -352,6 +383,14 @@ body{
 
 }
 
+.main-nav > li .arrow{
+	float: right;
+}
+
+.main-nav > li:first-child{
+	border-top: 1px solid #666;
+}
+
 .show-nav .main-nav > li{
 	opacity: 1;
 }
@@ -360,7 +399,7 @@ body{
 
 	display: block;
 
-	padding: 1em;
+	padding: 1em 1em 0.9em;
 
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -381,25 +420,43 @@ body{
 
 }
 
+.main-nav .arrow{
+	-webkit-transition: 0.25s all ease-out;
+	-moz-transition: 0.25s all ease-out;
+	-ms-transition: 0.25s all ease-out;
+	-o-transition: 0.25s all ease-out;
+	transition: 0.25s all ease-out;
+}
+
 .close-button{
 	
+	position: absolute;
+	left: 0;
+	top: 0;
+
 	display: inline-block;
 	cursor: pointer;
 
-	margin: 1em 0 0 1em;
+	margin: 0.75em 0 0 0.875em;
 
-	opacity: 0.6;
+	opacity: 1;
 
-	-webkit-transition: 0.25s opacity ease-out;
-	-moz-transition: 0.25s opacity ease-out;
-	-ms-transition: 0.25s opacity ease-out;
-	-o-transition: 0.25s opacity ease-out;
-	transition: 0.25s opacity ease-out;
+	color: #FFF;
+
+	-webkit-transition: 0.25s all ease-out;
+	-moz-transition: 0.25s all ease-out;
+	-ms-transition: 0.25s all ease-out;
+	-o-transition: 0.25s all ease-out;
+	transition: 0.25s all ease-out;
 
 }
 
 .close-button:active{
-	opacity: 1;
+	color: #aaa;
+}
+
+.close-icon{
+	font-size: 2.5em;
 }
 
 @media only screen and (min-width: 480px) {

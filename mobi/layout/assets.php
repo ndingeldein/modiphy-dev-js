@@ -1,3 +1,7 @@
+<link rel="icon" href="../<?php echo $config['main_directory'] ?>/images/favicon.ico" type="image/x-icon" /> 
+<link rel="shortcut icon" href="../<?php echo $config['main_directory'] ?>/images/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="../<?php echo $config['main_directory'] ?>/images/iui-logo-touch-icon.png">
+
 <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
@@ -9,10 +13,10 @@
 <!-- <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
 <meta name="msapplication-TileColor" content="#222222"> -->
 
-<link href="../main/css/normalize.css" rel="stylesheet" type="text/css" />
-<link href="../main/css/icons/mono.css" rel="stylesheet" type="text/css" />
-<link href="../main/css/ezedit.css" rel="stylesheet" type="text/css" />
-<!-- <link href="./css/icons/flaticon.css" rel="stylesheet" type="text/css" /> -->
+<link href="../<?php echo $config['main_directory'] ?>/css/normalize.css" rel="stylesheet" type="text/css" />
+<link href="../<?php echo $config['main_directory'] ?>/css/icons/mono.css" rel="stylesheet" type="text/css" />
+<link href="../<?php echo $config['main_directory'] ?>/css/ezedit.css" rel="stylesheet" type="text/css" />
+<link href="./css/icons/flaticon.css" rel="stylesheet" type="text/css" />
 
 <link href="./css/mobile-bp.css" rel="stylesheet" type="text/css" />
 <link href="./css/main.css" rel="stylesheet" type="text/css" />

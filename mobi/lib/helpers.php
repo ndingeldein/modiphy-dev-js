@@ -10,24 +10,24 @@ function getMobilePageContent($page, $page_title){
 
 	$page_escape = htmlspecialchars($page);
 
-	if (file_exists("../../main/sources/".$page_escape."_mobile.html")) {
-	    readfile("../../main/sources/".$page_escape."_mobile.html");
+	if (file_exists("../../" . $config['sources_path'] . "mobile_" . $page_escape.".html")) {
+	    readfile("../../" . $config['sources_path'] . "mobile_" . $page_escape.".html");
 	}
-	elseif (!file_exists("../../main/sources/".$page_escape.".html")) {
-	    include("../../main/sources/not_found.php");
+	elseif (!file_exists("../../" . $config['sources_path'] . $page_escape.".html")) {
+	    include("../../" . $config['sources_path'] . "not_found.php");
 	}
 	else {
-		readfile("../../main/sources/".$page_escape.".html");
+		readfile("../../" . $config['sources_path'] . $page_escape.".html");
 	}
 
-	if (file_exists("../../main/sources/".$page_escape."_mobile.php")) {
-	    include("../../main/sources/".$page_escape."_mobile.php");
+	if (file_exists("../../" . $config['sources_path'] . "mobile_" . $page_escape.".php")) {
+	    include("../../" . $config['sources_path'] . "mobile_" . $page_escape.".php");
 	}
-	elseif (!file_exists("../../main/sources/".$page_escape.".php")) {
-	    include("../../main/sources/blank.php");
+	elseif (!file_exists("../../" . $config['sources_path'] . $page_escape.".php")) {
+	    include("../../" . $config['sources_path'] . "blank.php");
 	}
 	else {
-		include("../../main/sources/".$page_escape.".php");
+		include("../../" . $config['sources_path'] . $page_escape.".php");
 	}
 	
 };
