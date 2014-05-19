@@ -19,7 +19,8 @@
 
 <link href="./css/mobile-bp.css" rel="stylesheet" type="text/css" />
 <link href="./css/main.css" rel="stylesheet" type="text/css" />
+<link href="./css/ezedit.css" rel="stylesheet" type="text/css" />
 
-<link href="./dt/design_team.css" rel="stylesheet" type="text/css" />
+<link href="../lib/dt/mobile.css" rel="stylesheet" type="text/css" />
 
 <script src="../lib/js/vendor/modernizr.js"></script>
