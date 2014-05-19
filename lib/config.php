@@ -14,7 +14,6 @@ $config = array(
 
 	'analytics_tracking_id' => 'UA-XXXXXXX-XX',
 
-	'main_directory' => 'main',
 	'sources_path' => 'main/sources/'
 
 );

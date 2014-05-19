@@ -1,6 +1,6 @@
 <?php
 
-require_once(dirname(__FILE__) . '/main/dt/config.php');
+require_once(dirname(__FILE__) . '/lib/config.php');
 
 $ua = $config['analytics_tracking_id'];
 

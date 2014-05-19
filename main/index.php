@@ -1,15 +1,12 @@
-<?php require_once("../main/dt/config.php"); ?>
-<?php require_once("../" . $config['main_directory'] . "/php/db.php"); ?>
-<?php require_once("./lib/helpers.php"); ?>
+<?php require_once("../lib/config.php"); ?>
+<?php require_once("../lib/php/db.php"); ?>
+<?php require_once("../lib/php/helpers.php"); ?>
 
 <?php include('./layout/head.php') ?>
 
 <div class="wrapper">
 
-	<?php include('./layout/nav.php') ?>
-
 	<div class="page-wrapper">
-
 		
 		<?php include('./layout/header.php') ?>
 
@@ -26,8 +23,8 @@
 
 <?php include('./layout/scripts.php'); ?>
 
-<script type="text/javascript"  src="../<?php echo $config['main_directory']; ?>/js/modiphy/dev/dev.js"></script>
-<script type="text/javascript"  src="js/main.js"></script>
+<script type="text/javascript"  src="../lib/js/modiphy/dev/dev.js"></script>
+<script type="text/javascript"  src="./js/main.js"></script>
 
 
 
@@ -36,8 +33,7 @@
 (function(){
 
 	var options = {
-		siteId: <?php echo $config['mobile_site_id']; ?>,
-		pathToMain: '../<?php echo $config["main_directory"]; ?>/'
+		siteId: <?php echo $config['site_id']; ?>
 	};
 	
 	App.start( options );

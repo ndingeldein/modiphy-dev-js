@@ -1,4 +1,22 @@
 /*
+Ezedit Styles
+*/
+.ezedit_body{
+	color: #434343;
+	font-family: 'Tahoma', serif;
+}
+
+.heading{
+	font-family: 'Georgia', serif;
+	font-size: 1.375em;
+}
+
+.sub_heading{
+	font-family: 'Georgia', serif;
+	font-size: 1.125em;
+}
+
+/*
 Center header logo vertically
 */
 
@@ -26,13 +44,8 @@ Image style   :
 */
 
 .header .logo img{	
-	width: 91px;
-	height: 48px;
-}
-
-.close-button img{
-	width: 40px;
-	height: 28px;
+	width: 123px;
+	height: 50px;
 }
 
 /*
@@ -47,12 +60,12 @@ Save logos twice the size of max-width.
 
 .intro-logo img{
 	width: 80%;
-	max-width: 365px;
+	max-width: 491px;
 }
 
 .home .logo img{	
-	width: 60%;
-	max-width: 300px;
+	width: 80%;
+	max-width: 381px;
 }
 
 /*
@@ -63,16 +76,16 @@ BG Image
 
 /* Pattern */
 
-.intro.page, .home.page{
+/*.intro.page, .home.page{
 	background-image: url(../images/bg.jpg);
 	background-repeat: repeat;
 	background-position: 0 0;
-}
-
-/* Color 
-/*.intro.page, .home.page{
-	background-color: #336699;
 }*/
+
+/* Color*/ 
+.intro.page, .home.page{
+	background-color: #FFF;
+}
 
 /* Cover */
 /*.intro.page, .home.page{
@@ -88,13 +101,13 @@ Home Nav
 */
 
 .home-nav > li > a{
-	background-color: #F26922;
-	color: #FFF4CB !important;
+	background-color: #828282;
+	color: #f6f4e8 !important;
 }
 
 .home-nav > li > a:active{
-	/*background-color: #444;*/
-	color: #973401 !important;
+	background-color: #690031;
+	/*color: #973401 !important;*/
 }
 
 /*
@@ -102,12 +115,12 @@ Info
 */
 
 .info{
-	color: #FFF4CB;
+	color: #9c0059;
 }
 
 /*Directions*/
 .info a:link, .info a:visited, .info a:active{   
-    color: #FFF;
+    color: #000;
 }
 
 .info a:active{
@@ -117,11 +130,11 @@ Info
 /*Social Nav*/
 
 .social-nav > li{
-	color: #FFF4CB;
+	color: #9c0059;
 }
 
 .social-nav > li:active{
-	color: #F26922;
+	color: #000;
 }
 
 /*
@@ -129,12 +142,14 @@ Header
 */
 
 .header{	
-	background-color: #006288;
+	background-color: #9c0059;
 }
 
 /*Page Title*/
 .page h1{
-	color: #222;
+	font-size: 2.5em;
+	color: #9c0059;
+	font-family: 'Georgia', serif;
 }
 
 /*
@@ -142,20 +157,20 @@ Slide Out Nav Container
 */
 
 .nav-wrapper{
-	background-color: #F26922;
+	background-color: #f1f1f1;
 }
 
 /*
 	Body BG color needs to match slide out nav bg
 */
 body{
-	background: #F26922;
+	background: #f1f1f1;
 }
 
 /*Close Button*/
 
 .close-button{
-	color: #FFF;
+	color: #9c0059;
 }
 
 .close-button:active{
@@ -164,20 +179,25 @@ body{
 
 /*Main Nav*/
 
+.main-nav > li{
+	color: #9c0059;
+	border-color: #cacacb !important;
+}
+
 .main-nav > li > a:active{
 	
 	color: #FFF !important;
-	background-color: rgba(0,0,0,0.25);
+	background-color: #9c0059;
 
 }
 
 .main-nav .arrow{
-	color: #000;	
+	color: #cacacb;	
 }
 
 .main-nav > li > a:active .arrow{
 
-	color: #F00;
+	color: #FFF;
 	margin-right: 1em;
 
 }

@@ -1,7 +1,7 @@
 <?php header('Content-type: application/json'); ?>
-<?php require_once("../dt/config.php"); ?>
-<?php require_once("../php/db.php"); ?>
-<?php require_once("../php/helpers.php"); ?>
+<?php require_once("../../lib/config.php"); ?>
+<?php require_once("../../lib/php/db.php"); ?>
+<?php require_once("../../lib/php/helpers.php"); ?>
 
 <?php
 

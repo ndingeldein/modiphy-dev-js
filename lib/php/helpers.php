@@ -5,6 +5,30 @@ function url_get_param($url, $name, $default) {
     return isset($vars[$name]) ? $vars[$name] : $default;
 }
 
+function getPageContent($page, $page_title){
+	global $config;
+
+	$page_escape = htmlspecialchars($page);
+
+	if ($page_escape == "search") {
+	    include("../lib/reutn.php");
+	}
+	elseif (!file_exists("../../" . $config['sources_path'] . $page_escape . ".html")) {
+	    include("../../" . $config['sources_path'] . "/not_found.php");
+	}
+	else {
+		readfile("../../" . $config['sources_path'] . $page_escape . ".html");
+	}
+
+	if (!file_exists("../../" . $config['sources_path'] . $page_escape . ".php")) {
+	    include("../../" . $config['sources_path'] . "blank.php");
+	}
+	else {
+		include("../../" . $config['sources_path'] . $page_escape.".php");
+	}
+	
+};
+
 function getMobilePageContent($page, $page_title){
 	global $config;
 

@@ -1,6 +1,6 @@
-<?php require_once("../../main/dt/config.php"); ?>
-<?php require_once("../../" . $config['main_directory'] . "/php/db.php"); ?>
-<?php require_once("../lib/helpers.php"); ?>
+<?php require_once("../../lib/config.php"); ?>
+<?php require_once("../../lib/php/db.php"); ?>
+<?php require_once("../../lib/php/helpers.php"); ?>
 
 <?php
 

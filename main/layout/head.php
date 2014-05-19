@@ -8,7 +8,7 @@
 	<meta name="description" content="<?php readfile("./sources/description.html") ?>" />
 	<meta name="keywords" content="<?php readfile("./sources/keywords.html") ?>" />
 
-	<?php include('./php/assets.php'); ?>
+	<?php include('./layout/assets.php'); ?>
 
 </head>
 
