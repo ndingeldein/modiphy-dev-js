@@ -6,7 +6,10 @@
 
 <div class="wrapper">
 
+	<?php include('./layout/nav.php') ?>
+
 	<div class="page-wrapper">
+
 		
 		<?php include('./layout/header.php') ?>
 
@@ -16,6 +19,8 @@
 		</div>
 
 	</div>
+
+	<div class="btp-target"></div>
 	
 </div>
 
@@ -33,7 +38,7 @@
 (function(){
 
 	var options = {
-		siteId: <?php echo $config['site_id']; ?>
+		siteId: <?php echo $config['mobile_site_id']; ?>
 	};
 	
 	App.start( options );

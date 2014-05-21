@@ -1,1 +1,0 @@
-This php is mobile!

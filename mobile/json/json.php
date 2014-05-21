@@ -2,7 +2,6 @@
 <?php require_once("../../lib/config.php"); ?>
 <?php require_once("../../lib/php/db.php"); ?>
 <?php require_once("../../lib/php/helpers.php"); ?>
-
 <?php
 
 	$page = (string)url_get_param($_SERVER['REQUEST_URI'], 'page', 'not_found');

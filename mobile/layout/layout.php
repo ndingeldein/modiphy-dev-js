@@ -11,9 +11,9 @@
 	$page_escape = htmlspecialchars($page);
 	$layout_escape = htmlspecialchars($layout);
 	
-	if (!file_exists($layout_escape.".php")) {	   
+	if (!file_exists($layout_escape.".php")) {
 
-	   include("default.php");
+		include("default.php");
 
 	}else {
 		include($layout_escape . ".php");
