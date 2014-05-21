@@ -47,11 +47,13 @@ function getMobilePageContent($page, $page_title){
 	if (file_exists("../../" . $config['sources_path'] . "mobile_" . $page_escape.".php")) {
 	    include("../../" . $config['sources_path'] . "mobile_" . $page_escape.".php");
 	}
-	elseif (!file_exists("../../" . $config['sources_path'] . $page_escape.".php")) {
-	    include("../../" . $config['sources_path'] . "blank.php");
+	elseif (file_exists("../../" . $config['sources_path'] . $page_escape.".php") && !file_exists("../../" . $config['sources_path'] . "mobile_" . $page_escape.".html")) {
+
+		include("../../" . $config['sources_path'] . $page_escape . ".php");
+	    
 	}
 	else {
-		include("../../" . $config['sources_path'] . $page_escape.".php");
+		include("../../" . $config['sources_path'] . "blank.php");
 	}
 	
 };

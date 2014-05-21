@@ -11,11 +11,12 @@
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
 	font-family: Flaticon;
-    font-size: 1em;
+        font-size: 1em;
 font-style: normal;
-}.flaticon-arrow487:before {
+line-height: 1em;
+}.flaticon-close11:before {
 	content: "\e000";
 }
-.flaticon-close11:before {
+.flaticon-up67:before {
 	content: "\e001";
 }

@@ -52,7 +52,7 @@ body{
 	top: 0;
 	z-index: 99;
 
-	padding: 5em 0 4em 0;
+	padding: 4em 0 4em 0;
 
 	-webkit-transition: 0.3s width ease-out;
 	-moz-transition: 0.3s width ease-out;
@@ -177,7 +177,8 @@ body{
 .home-nav > li > a{
 	display: block;
 	width: 100%;
-	padding: 0.5em 1em 0.4em;
+	font-size: 0.875em;
+	padding: 0.6em 1em 0.5em;
 	background-color: #000;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -210,6 +211,11 @@ body{
 	margin-left: 0.25em;
 }
 
+.nav-wrapper .info{
+	font-size: 0.875em;
+}
+
+
 .info a:active{
 	color: #333;
 }
@@ -223,15 +229,14 @@ body{
 	min-width: 320px;
 }
 
-.nav-wrapper .social-nav{
-	padding-left: 1em;
-}
-
-
 .social-nav{
 	list-style: none;
 	margin: 0;
-	padding: 0;
+	padding: 0;	
+}
+
+.nav-wrapper .social-nav{
+	padding-left: 0.875em;
 	min-width: 320px;
 }
 
@@ -239,7 +244,7 @@ body{
 	margin: 0;
 	padding: 0;
 	display: inline-block;
-	font-size: 2.5em;
+	
 	-webkit-transition: 0.25s ease-out color;
 	-moz-transition: 0.25s ease-out color;
 	-ms-transition: 0.25s ease-out color;
@@ -248,16 +253,23 @@ body{
 }
 
 .home .social-nav > li{
-	margin-left: 0.125em;
+	margin-left: 0.5em;
 }
 
 .nav-wrapper .social-nav > li{
-	margin-right: 0.125em;
+	margin-right: 0.5em;
+}
+
+.home .social-nav > li > a{
+	font-size: 2.25em;
+}
+
+.nav-wrapper .social-nav > li > a{
 	font-size: 2.5em;
 }
 
 .home .social-nav > li:first-child{
-	margin-right: 0;
+	margin-left: 0;
 }
 
 .ezedit_body{
@@ -268,6 +280,8 @@ body{
 }
 
 .header{
+
+	position: relative;
 	
 	background-color: #444;
 	height: 0;
@@ -284,21 +298,21 @@ body{
 }
 
 .inside .header{
-	height: 5em;
+	height: 4em;
 }
 
 .menu-button{
 
 	float: left;
 
-	width: 5em;
+	width: 4.5em;
 	height: 100%;
 
 	font-size: 1em;
 
 	margin: 0;
 
-	padding: 1.4375em 1.125em 0;
+	padding: 1em 1.125em 0;
 
 	cursor: pointer;
 
@@ -323,7 +337,7 @@ body{
 .menu-button .bar{
 	
 	width: 100%;
-	height: 0.375em;
+	height: .3125em;
 	background-color: #FFF;
 	margin: 0 0 0.5em;
 
@@ -333,7 +347,9 @@ body{
 
 .header .logo{
 	display: block;
-	float: right;
+	position: absolute;
+	right: 0;
+	top: 0;
 	margin: 1.675em 1.5em 0 0;
 
 	-webkit-transition: 0.25s opacity ease-out;
@@ -343,12 +359,16 @@ body{
 	transition: 0.25s opacity ease-out;
 }
 
+.show-nav .header .logo{
+	display: none;
+}
+
 .header .logo:active{
 	opacity: 0.7;
 }
 
 .page h1{
-	font-size: 3em;
+	font-size: 2em;
 	line-height: 1.125em;
 }
 
@@ -400,7 +420,9 @@ body{
 
 	display: block;
 
-	padding: 1em 1em 0.9em;
+	font-size: 0.9375em;
+
+	padding: 0.75em 1em 0.675em;
 
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -438,7 +460,7 @@ body{
 	display: inline-block;
 	cursor: pointer;
 
-	margin: 0.75em 0 0 0.875em;
+	margin: 0.675em 0 0 0.875em;
 
 	opacity: 1;
 
@@ -457,7 +479,48 @@ body{
 }
 
 .close-icon{
+	font-size: 2em;
+}
+
+.home.page .bg, .intro.page .bg{
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+}
+
+.btp{
+	position: absolute;
+	display: none;
+	bottom: 0em;
+	right: 0.5em;
+	z-index: 99;
+	
+	cursor: pointer;
+	color: #000;
+}
+
+.btp a{
 	font-size: 2.5em;
+	opacity: 0.6;
+	-webkit-transition: 0.25 opacity ease-out;
+	-moz-transition: 0.25 opacity ease-out;
+	-ms-transition: 0.25 opacity ease-out;
+	-o-transition: 0.25 opacity ease-out;
+	transition: 0.25 opacity ease-out;
+}
+
+.btp a:active{
+	opacity: 1;
+}
+
+.btp-target{
+	position: absolute;
+	left: 0;
+	top: 20px;
+	z-index: -999;
 }
 
 @media only screen and (min-width: 480px) {
@@ -467,3 +530,4 @@ body{
    }
 
 }
+

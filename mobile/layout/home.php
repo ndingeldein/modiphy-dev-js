@@ -10,3 +10,5 @@
 
 <ul class="social-nav"></ul>
 
+<div class="bg"></div>
+

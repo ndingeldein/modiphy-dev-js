@@ -4,7 +4,7 @@ require_once("./lib/php/detect_mobile.php");
 
 if(isMobile()){
 
-	header("Location:mobi/");
+	header("Location:mobile/");
 
 }else{
 

@@ -6,7 +6,7 @@
 		<div class="bar"></div>
 	</div>
 
-	<a href="#home" class="logo">
+	<a class="logo">
 		<img src="./images/header_logo.png" alt="">
 	</a>
 
