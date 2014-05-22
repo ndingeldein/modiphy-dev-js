@@ -69,10 +69,13 @@ BG Image
 	background-color: #FFF;
 }
 
-/* Fullscreen */
-/*.home.page .bg, .intro.page .bg{
-	
-	background-image: url(../../mobile/images/bg.jpg);
+/* Cover */
+/*.intro.page, .home.page{
+	background-image: url(../images/bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-background-size: cover;
+	background-size: cover;
 }*/
 
 /*

@@ -4,19 +4,14 @@
 
 <?php include('./layout/head.php') ?>
 
-<div class="wrapper">
+<?php include('./layout/header.php') ?>
 
-	<div class="page-wrapper">
+<div class="page-wrapper">	
+
+	<div class="page-container">
 		
-		<?php include('./layout/header.php') ?>
-
-
-		<div class="page-container">
-			
-		</div>
-
 	</div>
-	
+
 </div>
 
 <?php include('./layout/templates.php'); ?>
