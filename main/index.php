@@ -19,6 +19,7 @@
 <?php include('./layout/scripts.php'); ?>
 
 <script type="text/javascript"  src="../lib/js/modiphy/dev/dev.js"></script>
+<script type="text/javascript"  src="./js/custom.js"></script>
 <script type="text/javascript"  src="./js/main.js"></script>
 
 
