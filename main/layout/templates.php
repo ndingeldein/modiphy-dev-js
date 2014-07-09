@@ -27,7 +27,7 @@ field01: {{ field01 }}<br>
 
 <script id="ni-social-template" type="text/x-handlebars-template">
 
-	<a class="{{ item.field01 }} symbol" href="{{ itemLink item }}" target="{{ itemTarget item '_self' }}">rounded{{ item.field01 }}</a>
+	<a class="{{ item.field01 }} symbol" href="{{ itemLink item }}" target="{{ itemTarget item '_self' }}">{{{ socialIcon item }}}</a>
 
 </script>
 
@@ -35,13 +35,14 @@ field01: {{ field01 }}<br>
 
 	<div class="img-holder">
 
-		<img src="{{ imageUrl item maxWidth=0 maxHeight=120 }}">
+		<img src="{{ imageUrl item maxwidth=0 maxheight=120 }}">
 
 	</div>
 
 </script>
 
 <script id="photo-gallery-template" type="text/x-handlebars-template">
+
 	<a class="close-button"><img src="./images/close.png"></a>
 	<div class="bg"></div>
 

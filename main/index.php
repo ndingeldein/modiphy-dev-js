@@ -14,15 +14,17 @@
 
 </div>
 
+<div class="overlay-page-wrapper">
+	<div class="bg"></div>
+	<a class="close-button">
+		<img src="./images/close.png" alt="">
+	</a>
+	<div class="overlay-page-container"></div>
+ </div>
+
 <?php include('./layout/templates.php'); ?>
 
 <?php include('./layout/scripts.php'); ?>
-
-<script type="text/javascript"  src="../lib/js/modiphy/dev/dev.js"></script>
-<script type="text/javascript"  src="./js/custom.js"></script>
-<script type="text/javascript"  src="./js/main.js"></script>
-
-
 
 <script>
 
