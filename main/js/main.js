@@ -59,8 +59,26 @@ App = (function( App ){
 
 			_.extend( this.homeButton, M.Mixins.Transitions.Fader);
 
+			this.socialNavitems = M.getCatItemsByTitle( this.gallery, 'Social Nav' );
+
+			this.socialNav = new M.CollectionView({
+
+				collection: this.socialNavitems,
+				el: '.social-nav',
+				itemView: M.NavitemView,
+				itemViewOptions: {
+
+					tagName: 'li',
+					className: 'navitem',
+					templateId: 'ni-social-template'
+
+				}
+
+			});
+
 			this.nav.render();
 			this.homeButton.render();
+			this.socialNav.render();
 
 			this.$body.find('.nav-container').append( this.nav.el );
 

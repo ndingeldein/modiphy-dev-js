@@ -8,7 +8,7 @@
 
 $config = array(
 
-	'site_id' => 603,
+	'site_id' => 624,
 	'mobile_site_id' => 622,
 	'photo_gallery_id' => 604,
 
