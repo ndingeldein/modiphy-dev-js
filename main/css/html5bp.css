@@ -132,9 +132,11 @@ body a:link, body a:visited, body a:active{
 
 .ezedit_body a:link, .ezedit_body a:visited, .ezedit_body a:active{
     text-decoration: underline;
+    color: #00F;
 }
 .ezedit_body a:hover{
     text-decoration: underline;
+    color: #009;
 }
 
 /**

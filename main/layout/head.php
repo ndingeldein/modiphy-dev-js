@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +8,8 @@
 	<meta name="description" content="<?php readfile("./sources/description.html") ?>" />
 	<meta name="keywords" content="<?php readfile("./sources/keywords.html") ?>" />
 
+	<?php include('./layout/base_href.php') ?>
+	
 	<?php include('./layout/assets.php'); ?>
 
 </head>

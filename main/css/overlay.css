@@ -61,9 +61,14 @@
 
 }
 
+.no-js .photo_gallery.page .image-viewer{
+	visibility: visible;
+}
+
 
 .photo_gallery.page .next, .photo_gallery.page .prev{
-
+	
+	display: block;
 	position: fixed;
 	top: 50%;
 	margin-top: -50px;

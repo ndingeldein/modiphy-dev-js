@@ -1,6 +1,6 @@
-<?php require_once("../../lib/config.php"); ?>
-<?php require_once("../../lib/php/db.php"); ?>
-<?php require_once("../../lib/php/helpers.php"); ?>
+<?php require_once("../../../lib/config.php"); ?>
+<?php require_once("../../../lib/php/db.php"); ?>
+<?php require_once("../../../lib/php/helpers.php"); ?>
 
 <?php
 
@@ -10,8 +10,8 @@
 
 	$page_escape = htmlspecialchars($page);
 	$layout_escape = htmlspecialchars($layout);
-	
-	if (!file_exists($layout_escape.".php")) {	   
+
+	if (!file_exists($layout_escape.".php")) {
 
 	   include("default.php");
 

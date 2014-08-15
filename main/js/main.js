@@ -30,29 +30,21 @@ App = (function( App ){
 			this.pageTypes.add( new M.PageType('photo_gallery', M.PhotoGalleryPageView) );
 
 			
-			var niViewOptions = {
+			var niViewOptions = {};
 
-				tagName: 'li',
-				className: 'navitem',
-				templateId: 'ni-template'
-
-			};
-
-			this.nav = new M.CollectionView({
+			this.nav = new M.DomCollectionView({
 
 				collection: this.navitems,
-				tagName: 'ul',
-				className: 'main-nav',
+				el: '.main-nav',
 				itemView: M.NavitemView,
 				itemViewOptions: niViewOptions
 
 			});
 
 			this.homeButton = new M.ItemView({
+
 				model: new Backbone.Model({}),
-				templateId: 'home-button-template',
-				tagName: 'a',
-				className: 'home-button',
+				el: '.home-button',
 				attributes: {href: '#home'}
 
 			});
@@ -61,8 +53,6 @@ App = (function( App ){
 
 			this.nav.render();
 			this.homeButton.render();
-
-			this.$body.find('.nav-container').append( this.nav.el );
 
 			_.extend( this.pageViewer, {
 
@@ -94,9 +84,7 @@ App = (function( App ){
 
 			var that = this;
 
-			Backbone.history.start();
-
-			
+			this.startHistory( this.options.root );
 			
 		},
 
@@ -130,10 +118,10 @@ App = (function( App ){
 	
 	App.start = function( options ){
 
-		var site = new M.Site( options );
+		this.site = new M.Site( options );
 
-		site.load()
-			.done( site.createGallery )
+		this.site.load()
+			.done( this.site.createGallery )
 			.fail(function(x, y, e){
 				console.log(e);
 			});

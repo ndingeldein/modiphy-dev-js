@@ -1,0 +1,12 @@
+html, body{
+	min-width: 1000px;
+	min-height: 768px;
+}
+
+.header-wrapper{
+	position: absolute;	
+}
+
+.footer-wrapper{
+	position: absolute;
+}

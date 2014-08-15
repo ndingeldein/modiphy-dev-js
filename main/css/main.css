@@ -146,6 +146,10 @@ body{
 
 }
 
+.no-js .page-container{
+	visibility: visible;
+}
+
 .page{
 	
 	position: relative;

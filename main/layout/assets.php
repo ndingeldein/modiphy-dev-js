@@ -15,6 +15,22 @@
 <link href="./css/ezedit.css" rel="stylesheet" type="text/css" />
 <link href="../lib/dt/site.css" rel="stylesheet" type="text/css" />
 
+<?php
+
+if(isMobile()){
+	echo '<link href="./css/mobile.css" rel="stylesheet" type="text/css" />';
+}
+
+?>
+
+<?php 
+
+// for overlay page styles for browswers w/o Javascript enabled
+if($_GET['overlay']){
+	echo '<link href="./css/overlay-no-js.css" rel="stylesheet" type="text/css" />';
+}
+
+?>
 <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,800,700' rel='stylesheet' type='text/css'> -->
 
 <script src="../lib/js/vendor/modernizr.js"></script>

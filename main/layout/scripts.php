@@ -13,6 +13,7 @@ jquery 1.9 or later must be used for migrate plugin
 
 
 <script type="text/javascript" src="../lib/js/vendor/backbone.js"></script>
+<script type="text/javascript" src="../lib/js/vendor/backbone.analytics.js"></script>
 
 <script type="text/javascript" src="../lib/js/vendor/tweenmax.js"></script>
 

@@ -51,7 +51,8 @@
 
 		goHome: function(){
 
-			window.location.hash = '#home';
+			//window.location.hash = '#home';
+			App.site.router.navigate( 'home', {trigger: true});
 
 		}
 
