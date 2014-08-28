@@ -11,7 +11,7 @@ $images = get_category_images(6621);
 		foreach ($images as $image) {
 
 			$image_url = get_image_url($image, 0, 120);
-			$link = '?overlay=photo_gallery&id=' . $image['id'];
+			$link = $config['direct_link'] . '?overlay=photo_gallery&id=' . $image['id'];
 
 			echo <<<EOT
 				

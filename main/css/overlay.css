@@ -71,10 +71,14 @@
 	display: block;
 	position: fixed;
 	top: 50%;
-	margin-top: -50px;
+	margin-top: -24px;
+	padding: 0.5em;
 
-	background: #FFF;
-	cursor: pointer;
+	opacity: 0.3;
+
+	-webkit-transition: 0.25s ease-out;
+	-o-transition: 0.25s ease-out;
+	transition: 0.25s ease-out;
 
 }
 
@@ -87,5 +91,11 @@
 .photo_gallery.page .next{
 
 	right: 0;
+
+}
+
+.photo_gallery.page .next:hover, .photo_gallery.page .prev:hover{
+	
+	opacity: 1;
 
 }

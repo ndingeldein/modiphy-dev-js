@@ -12,7 +12,7 @@ $config = array(
 	'mobile_site_id' => 622,
 	'photo_gallery_id' => 582,
 
-	'analytics_tracking_id' => 'UA-3460942-3',
+	'analytics_tracking_id' => 'UA-XXXXXXX-X',
 
 	'sources_path' => 'main/sources/',
 	'direct_link' => 'http://dev.modiphy.com/main/'
