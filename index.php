@@ -3,35 +3,64 @@
 require_once("./lib/php/detect_mobile.php");
 
 // Coming Soon
-//header("location:cs/");
+header("location:cs/");
 
-/*Go Live
+//Go Live
 	
 
 	if(isMobile()){
 
-		header("Location:mobile/");
+		//header("Location:mobile/");
 
 	}else{
 
-		header("Location:main/");
+		//header("Location:main/");
 
 }
-*/
 
-require_once("./main/index.php");
 
 ?>
 
-<div id="Layer1" style="position:absolute; width:700px; height:387px; z-index:1; top: -1700px;">
+<?php require_once('./lib/config.php'); ?>
 
-<?php //readfile("./main/sources/description.html") ?><br>
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title><?php readfile($config['sources_path'] . 'metadata_website_title.html'); ?></title>
+	<meta name="robots" content="all" />
+	<meta name="description" content="<?php readfile($config['sources_path'] . 'metadata_description.html'); ?>" />
+	<meta name="keywords" content="<?php readfile($config['sources_path'] . 'metadata_keywords.html'); ?>" />
 
-<?php //require_once("/usr/local/lib/php/links.php"); ?><br>
+	<meta property="og:image" content="http://webgallerydisplay.com/image.php?maxwidth=300&maxheight=&id=42156"/>
 
-<?php //readfile("./main/sources/keywords.html") ?><br>
+<style>
+.visuallyhidden{
 
-<?php //readfile("./main/sources/about.html") ?><br>
+	border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="visuallyhidden">
+
+<?php include($config['sources_path'] . 'sitemap.php'); ?><br>
 
 </div>
+
+</body>
+
+</html>
 
