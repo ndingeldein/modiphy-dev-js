@@ -8,15 +8,15 @@ header("location:cs/");
 //Go Live
 	
 
-	if(isMobile()){
+// if(isMobile()){
 
-		//header("Location:mobile/");
+// 	header("Location:mobile/");
 
-	}else{
+// }else{
 
-		//header("Location:main/");
+// 	header("Location:main/");
 
-}
+// }
 
 
 ?>
@@ -33,7 +33,7 @@ header("location:cs/");
 	<meta name="description" content="<?php readfile($config['sources_path'] . 'metadata_description.html'); ?>" />
 	<meta name="keywords" content="<?php readfile($config['sources_path'] . 'metadata_keywords.html'); ?>" />
 
-	<meta property="og:image" content="http://webgallerydisplay.com/image.php?maxwidth=300&maxheight=&id=42156"/>
+	<meta property="og:image" content="./lib/images/og_image.png"/>
 
 <style>
 .visuallyhidden{
