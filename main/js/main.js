@@ -24,7 +24,7 @@ App = (function( App ){
 				this.navitems.toJSON()
 			);
 
-			this.pageTypes.add( new M.PageType('text', M.PageView) );
+			this.pageTypes.add( new M.PageType('text', App.Views.DefaultPageView) );
 			this.pageTypes.add( new M.PageType('intro', M.IntroPageView) );
 			this.pageTypes.add( new M.PageType('gallery_thumbs', M.GalleryThumbsPageView) );
 			this.pageTypes.add( new M.PageType('photo_gallery', M.PhotoGalleryPageView) );
@@ -45,7 +45,7 @@ App = (function( App ){
 
 				model: new Backbone.Model({}),
 				el: '.home-button',
-				attributes: {href: '#home'}
+				attributes: {href: 'home'}
 
 			});
 
@@ -53,32 +53,6 @@ App = (function( App ){
 
 			this.nav.render();
 			this.homeButton.render();
-
-			_.extend( this.pageViewer, {
-
-				showTransition: function(){
-
-					TweenMax.to( this.$el, 0.5, {autoAlpha:1, onComplete: this.triggerShown});
-
-				},
-
-				onShown: function(){
-
-					var imgHolder = this.$el.find('.image-holder');
-
-					imgHolder.imagesLoaded(function(){
-						TweenMax.to( imgHolder, 0.5, {autoAlpha:1});
-					});
-
-				},
-
-				hideTransition: function(){
-
-					TweenMax.to( this.$el, 0.5, {autoAlpha:0, onComplete: this.triggerHidden});
-
-				}
-
-			});
 
 			_.extend( this.overlayViewer, M.Mixins.Transitions.Fader );
 

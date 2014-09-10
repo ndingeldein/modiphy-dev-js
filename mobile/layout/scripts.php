@@ -21,10 +21,13 @@
 <script type="text/javascript" src="../lib/js/modiphy/core/mixins.js"></script>
 <script type="text/javascript" src="../lib/js/modiphy/core/core.js"></script>
 
-<script type="text/javascript" src="../lib/js/modiphy/page/page.js"></script>
+<script type="text/javascript" src="../lib/js/modiphy/site/page.js"></script>
 
 <script type="text/javascript" src="../lib/js/modiphy/mobile/mobile-site.js"></script>
 <script type="text/javascript" src="../lib/js/modiphy/mobile/mobile-views.js"></script>
+
+<script type="text/javascript"  src="./js/custom.js"></script>
+<script type="text/javascript"  src="./js/main.js"></script>
 
 
 </div>

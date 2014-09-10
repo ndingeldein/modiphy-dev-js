@@ -345,7 +345,7 @@ body{
 
 }
 
-.header .logo{
+.header-logo{
 	display: block;
 	position: absolute;
 	right: 0;
@@ -359,11 +359,11 @@ body{
 	transition: 0.25s opacity ease-out;
 }
 
-.show-nav .header .logo{
+.show-nav .header-logo{
 	display: none;
 }
 
-.header .logo:active{
+.header-logo:active{
 	opacity: 0.7;
 }
 

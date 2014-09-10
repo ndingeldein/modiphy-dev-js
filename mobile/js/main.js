@@ -80,7 +80,7 @@ App = (function(App) {
             MBP.preventZoom();
 
 
-            Backbone.history.start();
+            this.startHistory( this.options.root );
 
         },
 
@@ -122,7 +122,7 @@ App = (function(App) {
 
     App.start = function(options) {
 
-        var site = new M.Site(options);
+        this.site = new M.Site(options);
         resizeWrapper();
         $(window).resize(function(event) {
             resizeWrapper();
@@ -142,8 +142,8 @@ App = (function(App) {
         //     });
         // }
 
-        site.load()
-            .done(site.createGallery)
+        this.site.load()
+            .done(this.site.createGallery)
             .fail(function(x, y, e) {
                 console.log(e);
             });

@@ -46,9 +46,11 @@
 (function(){
 
 	var options = {
+
 		siteId: <?php echo $config['site_id']; ?>,
 		directLink: '<?php echo $config["direct_link"]; ?>',
 		root: '<?php echo $config["root"]; ?>'
+
 	};
 	
 	App.start( options );

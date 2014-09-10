@@ -8,6 +8,9 @@
 	$page_title = (string)url_get_param($_SERVER['REQUEST_URI'], 'title', 'not_found');
 	$layout = (string)url_get_param($_SERVER['REQUEST_URI'], 'layout', 'default');
 
+	$page_id = (int)url_get_param($_SERVER['REQUEST_URI'], 'page_id', 0);
+	$page_gallery_id = (int)url_get_param($_SERVER['REQUEST_URI'], 'page_gallery_id', 0);
+
 	$page_escape = htmlspecialchars($page);
 	$layout_escape = htmlspecialchars($layout);
 

@@ -1,8 +1,9 @@
+
 /*
 Center header logo vertically
 */
 
-.header .logo{
+.header-logo{
 	margin-top: 1.125em;
 }
 
@@ -25,7 +26,7 @@ Image style   :
 
 */
 
-.header .logo img{	
+.header-logo img{	
 	width: 123px;
 	height: 50px;
 }

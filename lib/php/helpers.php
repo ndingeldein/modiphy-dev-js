@@ -44,28 +44,62 @@ function getMobilePageContent($page, $page_title){
 
 	$page_escape = htmlspecialchars($page);
 
-	if (file_exists("../../" . $config['sources_path'] . "mobile_" . $page_escape.".html")) {
-	    readfile("../../" . $config['sources_path'] . "mobile_" . $page_escape.".html");
+	$upTwo = realpath(__DIR__ . '/../..');
+
+	if (file_exists($upTwo . '/' . $config['sources_path'] . "mobile_" . $page_escape.".html")) {
+	    readfile($upTwo . '/' . $config['sources_path'] . "mobile_" . $page_escape.".html");
 	}
-	elseif (!file_exists("../../" . $config['sources_path'] . $page_escape.".html")) {
-	    include("../../" . $config['sources_path'] . "not_found.php");
+	elseif (!file_exists($upTwo . '/' . $config['sources_path'] . $page_escape.".html")) {
+	    include($upTwo . '/' . $config['sources_path'] . "not_found.php");
 	}
 	else {
-		readfile("../../" . $config['sources_path'] . $page_escape.".html");
+		readfile($upTwo . '/' . $config['sources_path'] . $page_escape.".html");
 	}
 
-	if (file_exists("../../" . $config['sources_path'] . "mobile_" . $page_escape.".php")) {
-	    include("../../" . $config['sources_path'] . "mobile_" . $page_escape.".php");
+	if (file_exists($upTwo . '/' . $config['sources_path'] . "mobile_" . $page_escape.".php")) {
+	    include($upTwo . '/' . $config['sources_path'] . "mobile_" . $page_escape.".php");
 	}
-	elseif (file_exists("../../" . $config['sources_path'] . $page_escape.".php") && !file_exists("../../" . $config['sources_path'] . "mobile_" . $page_escape.".html")) {
+	elseif (file_exists($upTwo . '/' . $config['sources_path'] . $page_escape.".php") && !file_exists($upTwo . '/' . $config['sources_path'] . "mobile_" . $page_escape.".html")) {
 
-		include("../../" . $config['sources_path'] . $page_escape . ".php");
+		include($upTwo . '/' . $config['sources_path'] . $page_escape . ".php");
 	    
 	}
 	else {
-		include("../../" . $config['sources_path'] . "blank.php");
+		include($upTwo . '/' . $config['sources_path'] . "blank.php");
 	}
 	
 };
+
+function getGalleryData( $gallery_id ){
+	
+	if( $gallery_id && is_numeric($gallery_id) ){
+
+		$categories = get_gallery_categories( $gallery_id );
+
+		if(count($categories)){
+
+			$images = array();
+			foreach ($categories as $category) {
+				$images[] = get_category_images( $category['id'] );
+			}	
+
+			$obj = array('categories' => $categories, 'images' => $images );
+
+		}else{
+
+			$obj = array( 'success' => false );
+
+		}		
+		
+	}else{
+
+		$obj = array( 'success' => false );
+
+	}
+
+
+	echo json_encode($obj);
+
+}
 	
 ?>

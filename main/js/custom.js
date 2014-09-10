@@ -1,4 +1,31 @@
 (function(){
+
+	App.Views.DefaultPageView = M.PageView.extend({
+
+		showTransition: function(){
+
+			TweenMax.to( this.$el, 0.5, {autoAlpha:1, onComplete: this.triggerShown});
+
+		},
+
+		onShown: function(){
+
+			var imgHolder = this.$el.find('.image-holder');
+
+			imgHolder.imagesLoaded(function(){
+				TweenMax.to( imgHolder, 0.5, {autoAlpha:1});
+			});
+
+		},
+
+		hideTransition: function(){
+
+			TweenMax.to( this.$el, 0.5, {autoAlpha:0, onComplete: this.triggerHidden});
+
+		}
+		
+	});
+
 	M.IntroPageView = M.PageView.extend({
 		
 		onBeforeRenderChildren: function(){

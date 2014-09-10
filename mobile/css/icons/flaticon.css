@@ -13,10 +13,12 @@
 	font-family: Flaticon;
         font-size: 1em;
 font-style: normal;
-line-height: 1em;
-}.flaticon-close11:before {
+}.flaticon-arrow487:before {
 	content: "\e000";
 }
-.flaticon-up67:before {
+.flaticon-close11:before {
 	content: "\e001";
+}
+.flaticon-up67:before {
+	content: "\e002";
 }

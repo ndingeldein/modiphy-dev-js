@@ -28,17 +28,14 @@
 
 <?php include('./layout/scripts.php'); ?>
 
-<script type="text/javascript"  src="../lib/js/modiphy/dev/dev.js"></script>
-<script type="text/javascript"  src="./js/main.js"></script>
-
-
-
 <script>
 
 (function(){
 
 	var options = {
-		siteId: <?php echo $config['mobile_site_id']; ?>
+		siteId: <?php echo $config['mobile_site_id']; ?>,
+		directLink: '<?php echo $config["direct_mobile_link"]; ?>',
+		root: '<?php echo $config["mobile_root"]; ?>'
 	};
 	
 	App.start( options );

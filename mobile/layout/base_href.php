@@ -1,0 +1,1 @@
+<base href="http://sites.dev/modiphy-dev-js/mobile/" />

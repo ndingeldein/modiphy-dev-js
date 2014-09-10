@@ -1,6 +1,6 @@
-<link rel="icon" href="../lib/images/favicon.ico" type="image/x-icon" /> 
-<link rel="shortcut icon" href="../lib/images/favicon.ico" type="image/x-icon" />
-<link rel="apple-touch-icon" href="../lib/images/iui-logo-touch-icon.png">
+<link rel="icon" href="./images/favicon.ico" type="image/x-icon" /> 
+<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="./images/iui-logo-touch-icon.png">
 
 <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
