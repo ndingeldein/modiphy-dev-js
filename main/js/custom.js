@@ -1,5 +1,5 @@
 (function(){
-
+	
 	App.Views.DefaultPageView = M.PageView.extend({
 
 		showTransition: function(){
