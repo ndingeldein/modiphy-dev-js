@@ -11,7 +11,7 @@
 	</div>
 
 	<div class="info">
-		<span class="phone"><?php include('../' . $config['sources_path'] . 'phone.html'); ?></span><br><span class="directions"><?php include( '../' . $config['sources_path'] . 'directions.html') ?></span>
+		<span class="phone"><?php include('../' . $config['sources_path'] . 'phone.php'); ?></span><br><span class="directions"><?php include( '../' . $config['sources_path'] . 'directions.php') ?></span>
 	</div>
 
 	<ul class="social-nav"></ul>

@@ -3,6 +3,10 @@
 <div class="header-wrapper">
 
 	<div class="header">
+
+		<a id="logo" href="intro">
+			<img src="./images/logo.png" alt="">
+		</a>
 		
 		<div class="nav-container">
 			

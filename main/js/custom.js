@@ -26,6 +26,8 @@
 		
 	});
 
+	//_.extend( App.Views.DefaultPageView.prototype, M.Mixins.PageViews.SocialTray);
+
 	M.IntroPageView = M.PageView.extend({
 		
 		onBeforeRenderChildren: function(){

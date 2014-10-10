@@ -17,6 +17,12 @@ $config = array(
 	'sources_path' => 'main/sources/',
 	'direct_link' => 'http://dev.modiphy.com/main/',
 	'direct_mobile_link' => 'http://dev.modiphy.com/mobile/'
+);
+
+$config['og'] = array(
+	
+	'image_url' => $config['direct_link'] . 'images/og_image.jpg',
+	'title' => 'Website Title'
 
 );
 

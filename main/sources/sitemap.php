@@ -15,8 +15,9 @@ $upTwo = realpath(__DIR__ . '/../..');
 
 	$nav = get_cat_images_by_title($config['site_id'], 'Nav');
 	$pages = get_cat_images_by_title($config['site_id'], 'Pages');
+	$secondary_nav = get_cat_images_by_title($config['site_id'], 'Secondary Nav');
 
-	$images = array_merge( $nav, $pages);
+	$images = array_merge( $nav, $pages, $secondary_nav);
 
 	foreach ($nav as $image) {
 		
@@ -51,6 +52,6 @@ EOT;
 
 	}
 
-	readfile(__DIR__ . '/sitemap.html');
+	//readfile(__DIR__ . '/sitemap.html');
 
 ?>

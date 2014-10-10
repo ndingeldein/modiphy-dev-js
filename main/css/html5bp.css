@@ -248,6 +248,28 @@ body{
 }
 
 
+/*===================================
+=            Social Plugins         =
+===================================*/
+
+.plusone{
+    width: 58px !important;
+    vertical-align: bottom !important;
+    margin-bottom: 5px !important;
+}
+
+iframe[id^='twitter-widget']{
+    
+    vertical-align: bottom;
+    margin-bottom: 0.375em;
+
+}
+
+.fb_iframe_widget{
+
+    margin-bottom: 5px !important;
+
+}
 
 
 /* ==========================================================================

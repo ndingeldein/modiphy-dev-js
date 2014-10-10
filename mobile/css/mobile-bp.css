@@ -75,6 +75,19 @@ textarea {
     -webkit-tap-highlight-color:transparent;
 }
 
+/**
+*
+* Reduces rendering pop ins while scrolling
+*
+**/
+.page{
+     -webkit-transform: translate3d(0,0,0);
+}
+
+.page *{
+     -webkit-transform: translate3d(0,0,0);
+}
+
 body a:link, body a:visited, body a:active{
     text-decoration: none;
     color: inherit; 
