@@ -5,7 +5,7 @@
 
 <?php include('./layout/head.php'); ?>
 
-<?php include('./layout/templates.php'); ?>
+<?php include('./layout/js_templates.php'); ?>
 
 <?php include('./layout/header.php'); ?>
 

@@ -8,7 +8,7 @@
 	<meta name="description" content="<?php readfile('../' . $config['sources_path'] . 'metadata_description.html'); ?>" />
 	<meta name="keywords" content="<?php readfile('../' . $config['sources_path'] . 'metadata_keywords.html'); ?>" />
 
-	<meta property="og:image" content="<?php echo $config['direct_link'] ?>/images/og_image.png"/>
+	<meta property="og:image" content="http://theplumbingwarehouse.net/og_image.jpg"/>
 
 	<meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">

@@ -22,3 +22,7 @@
 <a class="next" href="<?php echo $config['direct_link'] . 'home?overlay=photo_gallery&id=' . $next_image['id']; ?>">
 	<div class="icon-holder"><img src="./images/gallery_next.png"></div>
 </a>
+
+<div class="caption-wrapper">
+	<div class="caption"></div>
+</div>
