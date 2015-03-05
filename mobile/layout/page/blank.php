@@ -1,1 +1,0 @@
-<?php getMobilePageContent( $page, $page_title ); ?>

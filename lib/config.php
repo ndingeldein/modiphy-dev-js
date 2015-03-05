@@ -8,15 +8,14 @@
 
 $config = array(
 
-	'site_id' => 629,
-	'mobile_site_id' => 622,
-	'photo_gallery_id' => 673,
+	'site_id' => 692,
+	'client_gallery_id' => 683,
+	'photo_gallery_id' => 683,
 
 	'analytics_tracking_id' => 'UA-XXXXXXX-X',
 
 	'sources_path' => 'main/sources/',
-	'direct_link' => 'http://dev.modiphy.com/main/',
-	'direct_mobile_link' => 'http://dev.modiphy.com/mobile/'
+	'direct_link' => 'http://dev.modiphy.com/main/'
 );
 
 $config['og'] = array(
@@ -26,11 +25,12 @@ $config['og'] = array(
 
 );
 
+$config['isMobile'] = (isMobile()) ? 1 : 0;
+
 /*
 $config['root'] sets root path for Backbone history pushstate.
 This is necessary because it needs to be different for the local development and live domain environments.
 */
 include(__DIR__ . '/php/root.php');
-include(__DIR__ . '/php/mobile_root.php');
 	
 ?>

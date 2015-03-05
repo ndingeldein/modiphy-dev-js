@@ -1,0 +1,55 @@
+input[type=submit] { /* BUTTON COLOR */
+    border: 1px solid #791304;
+	background-color:#791304;
+	padding-left:15px;
+	padding-right:15px;
+	color:#FFF;
+	cursor: pointer;
+	-webkit-transition: background-color 0.1s linear;
+	-ms-border-radius:3px 3px 3px 3px;
+	-moz-border-radius:3px 3px 3px 3px;
+	-webkit-border-radius:3px 3px 3px 3px;
+	background-repeat: repeat-x;
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	/*font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 10px;*/
+	background-position: center center;
+	text-transform: uppercase;
+	margin-left: 0px;
+	text-align: center;
+	/*width: 137px;*/
+    line-height:30px;
+    height:35px;
+	margin-bottom: 1px;
+	text-decoration:none;
+
+	-webkit-appearance: none;
+    -moz-appearance: none;
+
+}
+.safari input.btTxt {
+font-size: 100%;
+}
+input[type=submit]:hover { /* BUTTON HOVER COLOR */
+	color: #791304;
+	text-decoration: none;
+	background-color: #fff;
+    border: 1px solid #791304;
+}
+.wufoo li.focused { /* HIGHLIGHT COLOR */
+    background-color: #e8d3d0;
+}
+#logo a { /* ALIGNMENT FOR GRAPHIC BANNER */
+	background-position: 27px 27px;
+	background-color:#050D1A;
+}
+h2 {
+	display:none;
+}
+form.wufoo {
+    margin: 30px 14px 5px 30px;
+    padding: 0 0 20px 0;
+    position: relative;
+}

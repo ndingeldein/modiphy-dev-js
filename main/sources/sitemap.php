@@ -5,23 +5,26 @@ $upTwo = realpath(__DIR__ . '/../..');
 ?>
 
 <?php require_once($upTwo . '/lib/php/detect_mobile.php'); ?>
+<?php require_once($upTwo . '/lib/php/autoload.php'); ?>
 <?php require_once($upTwo . '/lib/config.php'); ?>
-<?php require_once($upTwo . '/lib/php/db.php'); ?>
+<?php require_once($upTwo . '/lib/php/gallery.php'); ?>
 <?php require_once($upTwo . '/lib/php/helpers.php'); ?>
 
 <?php
 
+	$nav = $config['site_gallery']->getCatByTitle('Nav')->items;
+	$pages = $config['site_gallery']->getCatByTitle('Pages')->items;
+	$secondary_nav = $config['site_gallery']->getCatByTitle('Secondary Nav')->items;
 
+	$images = array_merge( $nav, $pages);
 
-	$nav = get_cat_images_by_title($config['site_id'], 'Nav');
-	$pages = get_cat_images_by_title($config['site_id'], 'Pages');
-	$secondary_nav = get_cat_images_by_title($config['site_id'], 'Secondary Nav');
-
-	$images = array_merge( $nav, $pages, $secondary_nav);
+	if(count($secondary_nav)){
+		$images = array_merge( $images, $secondary_nav);
+	}
 
 	foreach ($nav as $image) {
 		
-		$sub_images = get_cat_images_by_title($config['site_id'], $image['field01']);
+		$sub_images = $config['site_gallery']->getCatByTitle($image->field01)->items;
 
 		if(count($sub_images)){
 			$images = array_merge( $images, $sub_images);
@@ -31,7 +34,7 @@ $upTwo = realpath(__DIR__ . '/../..');
 
 	foreach ($images as $image) {
 
-		$link = get_link_url( $image, $config['direct_link'] . $image['field01']);
+		$link = $image->getLinkUrl($config['direct_link'] . $image->field01);
 		if(substr($link, 0, 1) == '?'){
 			$link = $config['direct_link'] . 'home' . $link;
 		}
@@ -40,8 +43,8 @@ $upTwo = realpath(__DIR__ . '/../..');
 			$link = $config['direct_link'] . $link;
 		}
 
-		$target = get_target( $image, '_self' );
-		$txt = getNavText($image);
+		$target = $image->getTarget();
+		$txt = $image->getNavText();
 
 		echo <<<EOT
 

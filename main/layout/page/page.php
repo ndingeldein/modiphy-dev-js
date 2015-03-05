@@ -1,5 +1,7 @@
+<?php require_once("../../../lib/php/detect_mobile.php"); ?>
+<?php require_once("../../../lib/php/autoload.php"); ?>
 <?php require_once("../../../lib/config.php"); ?>
-<?php require_once("../../../lib/php/db.php"); ?>
+<?php require_once("../../../lib/php/gallery.php"); ?>
 <?php require_once("../../../lib/php/helpers.php"); ?>
 
 <?php

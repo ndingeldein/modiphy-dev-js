@@ -1,6 +1,9 @@
 <?php
 
-$images = get_category_images(7354);
+$loader = new Modiphy\Gallery\Loader();
+$gallery = $loader->load($config['photo_gallery_id']);
+
+$images = $gallery->getCatByIndex(0)->items;
 
 ?>
 
@@ -10,8 +13,8 @@ $images = get_category_images(7354);
 
 		foreach ($images as $image) {
 
-			$image_url = get_image_url($image, 0, 120);
-			$link = $config['direct_link'] . '?overlay=photo_gallery&id=' . $image['id'];
+			$image_url = $image->getImageUrl(0, 120);
+			$link = $config['direct_link'] . '?overlay=photo_gallery&id=' . $image->id;
 
 			echo <<<EOT
 				

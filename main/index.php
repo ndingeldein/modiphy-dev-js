@@ -1,6 +1,7 @@
 <?php require_once("../lib/php/detect_mobile.php"); ?>
+<?php require_once("../lib/php/autoload.php"); ?>
 <?php require_once("../lib/config.php"); ?>
-<?php require_once("../lib/php/db.php"); ?>
+<?php require_once("../lib/php/gallery.php"); ?>
 <?php require_once("../lib/php/helpers.php"); ?>
 
 <?php include('./layout/head.php'); ?>
@@ -36,7 +37,8 @@
 	var options = {
 		siteId: <?php echo $config['site_id']; ?>,
 		directLink: '<?php echo $config["direct_link"]; ?>',
-		root: '<?php echo $config["root"]; ?>'
+		root: '<?php echo $config["root"]; ?>',
+		isMobile: <?php echo $config["isMobile"]; ?>
 	};
 	
 	App.start( options );

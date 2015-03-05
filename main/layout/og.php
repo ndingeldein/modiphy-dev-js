@@ -11,10 +11,10 @@ if($config['og']['image']){
 
 	$max_length = 500;
 
-	if (strlen($description) > $max_length)
+	if (strlen($config['og']['description']) > $max_length)
 	{
-	    $offset = ($max_length - 3) - strlen($description);
-	    $description = substr($description, 0, strrpos($description, ' ', $offset)) . '...';
+	    $offset = ($max_length - 3) - strlen($config['og']['description']);
+	    $config['og']['description'] = substr($config['og']['description'], 0, strrpos($config['og']['description'], ' ', $offset)) . '...';
 	}
 
 	echo <<<EOT
@@ -40,7 +40,7 @@ EOT;
 
 	<meta property="og:url" content="<?php echo currentUrl() ;?>"/>
 
-	<meta property="og:title" content=" | <?php readfile('../' . $config['sources_path'] . 'metadata_website_title.html'); ?>" />
+	<meta property="og:title" content="<?php readfile('../' . $config['sources_path'] . 'metadata_website_title.html'); ?>" />
 
 	<meta property="og:description" content="<?php readfile('../' . $config['sources_path'] . 'metadata_description.html'); ?>" />
 

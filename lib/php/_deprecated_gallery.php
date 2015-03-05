@@ -1,5 +1,5 @@
 <?php header('Content-type: application/json'); ?>
-<?php require_once("./db.php"); ?>
+<?php require_once("./_deprecated_db.php"); ?>
 <?php require_once("./helpers.php"); ?>
 
 <?php

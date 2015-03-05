@@ -1,7 +1,13 @@
-<?php
-	
-	$images = get_cat_images_by_title( $config['site_id'], 'Home Images');	
+<?php require_once("../../lib/php/gallery.php"); ?>
 
-	$obj = array( 'success' => true, 'images' => $images );
+<?php
+
+if(!$config['isMobile']){
+
+	$images = $config['site_gallery']->getCatByTitle('Home Images')->items;
+	
+	$obj = array( 'success' => true, 'images' => $images);
+
+}
 
 ?>

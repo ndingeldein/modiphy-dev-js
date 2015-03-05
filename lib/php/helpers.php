@@ -5,15 +5,7 @@ function url_get_param($url, $name, $default) {
     return isset($vars[$name]) ? $vars[$name] : $default;
 }
 
-function getNavText($image){
-
-	$default = ucwords(str_replace('_', ' ', $image['field01']) );
-
-	return ( strlen($image['field02']) ) ? $image['field02'] : $default ;
-
-}
-
-function getPageContent($page, $page_title){
+function getPageContent($page){
 	global $config;
 
 	$page_escape = htmlspecialchars($page);
@@ -39,7 +31,7 @@ function getPageContent($page, $page_title){
 	
 };
 
-function getMobilePageContent($page, $page_title){
+function getMobilePageContent($page){
 	global $config;
 
 	$page_escape = htmlspecialchars($page);
@@ -69,39 +61,6 @@ function getMobilePageContent($page, $page_title){
 	}
 	
 };
-
-function getGalleryData( $gallery_id ){
-	
-	if( $gallery_id && is_numeric($gallery_id) ){
-
-		$categories = get_gallery_categories( $gallery_id );
-
-		if(count($categories)){
-
-			$images = array();
-			foreach ($categories as $category) {
-				$images[] = get_category_images( $category['id'] );
-			}	
-
-			$obj = array('categories' => $categories, 'images' => $images );
-
-		}else{
-
-			$obj = array( 'success' => false );
-
-		}		
-		
-	}else{
-
-		$obj = array( 'success' => false );
-
-	}
-
-
-	echo json_encode($obj);
-
-}
-
 
 function currentURL() {
 
