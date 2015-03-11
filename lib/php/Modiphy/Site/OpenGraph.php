@@ -13,7 +13,7 @@ class OpenGraph
 	public $title;
 	public $description;
 
-	function __construct($image_url, $url, $title, $description)
+	public function __construct($image_url, $url, $title, $description)
 	{
 		
 		$this->image_url = $image_url;

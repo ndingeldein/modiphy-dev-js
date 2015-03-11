@@ -10,7 +10,7 @@ class Gallery
 
 	public $categories = array();
 	
-	function __construct($id, $title, array $categories = array())
+	public function __construct($id, $title, array $categories = array())
 	{
 		
 		$this->id = $id;

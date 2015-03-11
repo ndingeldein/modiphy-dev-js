@@ -10,7 +10,7 @@ class Item
 
 	const IMAGE_PREFIX = 'http://webgallerydisplay.com/image.php?id=';
 	
-	function __construct(array $input_array)
+	public function __construct(array $input_array)
 	{
 		
 		foreach ($input_array as $key => $value) {
@@ -19,7 +19,7 @@ class Item
 
 	}
 
-	function getImageUrl($maxwidth = 0, $maxheight = 0){
+	public function getImageUrl($maxwidth = 0, $maxheight = 0){
 
 		if(!$maxwidth && !$maxheight){
 			return self::IMAGE_PREFIX . $this->id . '&maxwidth=' . $this->width . '&maxheight=' . $this->height;
@@ -29,17 +29,17 @@ class Item
 
 	}
 
-	function getLinkUrl($default = ''){
+	public function getLinkUrl($default = ''){
 		return ( strlen($this->link01) ) ? $this->link01 : $default;
 	}
 
-	function getTarget($default = '_self'){
+	public function getTarget($default = '_self'){
 
 		return ( strlen($this->target01) ) ? $this->target01 : $default;
 
 	}
 
-	function getNavText(){
+	public function getNavText(){
 
 		$default = ucwords(str_replace('_', ' ', $this->field01) );
 
@@ -47,13 +47,13 @@ class Item
 
 	}
 
-	function isPlaceholder(){
+	public function isPlaceholder(){
 
 		return strpos($this->filename, 'placeholder-') !== FALSE;
 
 	}
 
-	function __tostString(){
+	public function __tostString(){
 		return $this->id;
 	}
 

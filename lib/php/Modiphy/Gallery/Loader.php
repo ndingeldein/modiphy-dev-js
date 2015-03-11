@@ -10,7 +10,7 @@ class Loader
 
 	protected $GALLERY_CACHE_DIR;
 
-	function __construct()
+	public function __construct()
 	{
 		
 		if(__DEV__){

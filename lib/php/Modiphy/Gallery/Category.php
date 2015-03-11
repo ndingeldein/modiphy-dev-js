@@ -10,7 +10,7 @@ class Category
 
 	public $items = array();
 	
-	function __construct(array $input_array, array $items = array())
+	public function __construct(array $input_array, array $items = array())
 	{
 		
 		foreach ($input_array as $key => $value) {
