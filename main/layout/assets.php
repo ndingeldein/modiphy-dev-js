@@ -16,7 +16,7 @@
 
 <?php
 
-if($config['isMobile']){
+if(__MOBILE__){
 	echo '<link href="./css/mobile.css" rel="stylesheet" type="text/css" />';
 }else{
 	echo '<link href="./css/non-mobile.css" rel="stylesheet" type="text/css" />';
@@ -27,7 +27,6 @@ if($config['isMobile']){
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700,600,400' rel='stylesheet' type='text/css'>
 
 <script src="../lib/js/vendor/modernizr.js"></script>
-
 
 <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
 	{"parsetags": "explicit"}

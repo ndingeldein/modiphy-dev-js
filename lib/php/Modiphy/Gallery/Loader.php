@@ -13,7 +13,11 @@ class Loader
 	function __construct()
 	{
 		
-		$this->GALLERY_CACHE_DIR = realpath(__DIR__ . '/../../../../../') . '/gallery_cache';
+		if(__DEV__){
+			$this->GALLERY_CACHE_DIR = realpath(__DIR__ . '/../../../../../') . '/gallery_cache';
+		}else{
+			$this->GALLERY_CACHE_DIR = '/home/webgalle/gallery_cache';
+		}
 
 	}
 

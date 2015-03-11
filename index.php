@@ -1,27 +1,27 @@
 <?php
+require_once(__DIR__ . '/lib/php/detect_mobile.php');
 
-require_once("./lib/php/detect_mobile.php");
-require_once("./lib/config.php");
+/***
+* COMING SOON*
+**/
+header('location:cs/');
 
-// Coming Soon
-header("location:cs/");
+/***
+* GO LIVE::RESPONSIVE*
+**/
+//header('Location:main/');
 
-//Go Live
-	
+/***
+* GO LIVE::MOBILE SITE*
+**/
+// if(__MOBILE__){
 
-// if(isMobile()){
-
-// 	header("Location:mobile/");
+// 	header('Location:mobile/');
 
 // }else{
 
-// 	header("Location:main/");
+// 	header('Location:main/');
 
 // }
 
-
 ?>
-
-<?php include($config['sources_path'] . 'sitemap.php'); ?><br>
-
-

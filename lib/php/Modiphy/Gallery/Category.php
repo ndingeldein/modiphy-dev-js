@@ -36,7 +36,8 @@ class Category
 	}
 
 	public function getItemByIndex($i){
-		return array_values($this->items)[$i];
+		$values = array_values($this->items);
+		return $values[$i];
 	}
 
 }

@@ -5,9 +5,9 @@
 
 		$page = $_GET['overlay'];
 		$page_title = str_replace('_', ' ', ucwords($page));
-		$image = get_gallery_image($config['site_id'], 'field01', $page);
+		$image = $site_gallery->getItem('field01', $page);
 
-		$layout = ( strlen($image['field04']) ) ? $image['field04'] : 'default';
+		$layout = ( strlen($image->field04) ) ? $image->field04 : 'default';
 		$layout_escape = htmlspecialchars($layout);
 
 		echo '<div class="page default ' . $page . '">';

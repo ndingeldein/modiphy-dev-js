@@ -45,7 +45,8 @@ class Gallery
 	}
 
 	public function getCatByIndex($i){
-		return array_values($this->categories)[$i];
+		$values = array_values($this->categories);
+		return $values[$i];
 	}
 
 	public function getItem($field, $value){

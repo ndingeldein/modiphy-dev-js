@@ -2,47 +2,32 @@
 
 $page = currentPage();
 
-if($config['og']['image']){
+if(isset($og_image)){
+	$og = new Modiphy\Site\OpenGraph(
 
-	$image = $config['og']['image'];
-	$config['og']['image_url'] = get_image_url($image);
-	$config['og']['url'] = currentURL();
-	$config['og']['description'] = strip_tags($image['field06']);
+			$og_image->getImageUrl(),
 
-	$max_length = 500;
+			currentURL(),
 
-	if (strlen($config['og']['description']) > $max_length)
-	{
-	    $offset = ($max_length - 3) - strlen($config['og']['description']);
-	    $config['og']['description'] = substr($config['og']['description'], 0, strrpos($config['og']['description'], ' ', $offset)) . '...';
-	}
+			$og_image->description,
 
-	echo <<<EOT
+			$og_image->field06
 
-<meta property="og:image" content="{$config['og']['image_url']}"/>
 
-<meta property="og:url" content="{$config['og']['url']}" />
+		);
+}else{
+	$og = new Modiphy\Site\OpenGraph(
 
-<meta property="og:title" content="{$image['field01']} | {$config['og']['title']}" />
+			DIRECT_LINK . 'images/og_image.jpg',
 
-<meta property="og:description" content="{$config['og']['description']}" />
+			currentURL(),
 
-EOT;
+			file_get_contents(SOURCES_PATH . 'metadata_website_title.html'),
 
+			file_get_contents(SOURCES_PATH . 'metadata_description.html')
+
+
+		);
 }
 
-?>
-
-
-<?php if (!$config['og']['image']): ?>
-
-	<meta property="og:image" content="<?php echo $config['og']['image_url']; ?>"/>
-
-	<meta property="og:url" content="<?php echo currentUrl() ;?>"/>
-
-	<meta property="og:title" content="<?php readfile('../' . $config['sources_path'] . 'metadata_website_title.html'); ?>" />
-
-	<meta property="og:description" content="<?php readfile('../' . $config['sources_path'] . 'metadata_description.html'); ?>" />
-
-
-<?php endif ?>
+echo $og;

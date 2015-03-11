@@ -115,6 +115,8 @@
 	.main-nav > li > a{
 		display: block;
 
+		background-color: #ccc;
+
 		-webkit-transition: 0.25s ease-out;
 		-o-transition: 0.25s ease-out;
 		transition: 0.25s ease-out;
@@ -164,6 +166,7 @@
 	.page.home .series-wrapper{
 
 		position: absolute;
+		z-index: 0;
 		display: block;
 		z-index: 0;
 		left: 0;
@@ -205,6 +208,11 @@
 		background-size: cover;
 
 
+	}
+
+	.page .content-wrapper{
+		position: relative;
+		z-index: 1;
 	}
 
 }

@@ -1,10 +1,10 @@
 <?php
 
-$category = $config['site_gallery']->getCatByTitle('Interior Images');
+$category = $site_gallery->getCatByTitle('Interior Images');
 $image = $category->getItem('filename', $page . '.jpg');
 
 if(!$image){	
-	$image = $category->getItem('filename', 'default.jpg');
+	$image = $category->getItemByIndex(0);
 }
 
 ?>

@@ -3,15 +3,14 @@
 require_once(__DIR__ . '/nav.php');
 
 function getMobileNav($gallery, $images, $class='mobile-nav'){
-	global $config;
-
+	
 	$str = '<ul class="' . $class . '">';
 
 	foreach ($images as $image) {
 
-		$link = $image->getLinkUrl($config['direct_link'] . $image->field01);
+		$link = $image->getLinkUrl(DIRECT_LINK . $image->field01);
 		if(substr($link, 0, 1) == '?'){
-			$link = $config['direct_link'] . 'home' . $link;
+			$link = DIRECT_LINK . 'home' . $link;
 		}
 
 		$target = $image->getTarget('_self' );
@@ -35,7 +34,7 @@ EOT;
 
 	}
 
-	$str .= '<li><a href="' . $config['direct_link'] . 'home" target="_self">Home</a></li>';
+	$str .= '<li><a href="' . DIRECT_LINK . 'home" target="_self">Home</a></li>';
 
 	$str .= '</ul>';
 

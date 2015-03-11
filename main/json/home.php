@@ -1,10 +1,10 @@
-<?php require_once("../../lib/php/gallery.php"); ?>
-
 <?php
 
-if(!$config['isMobile']){
+if(!__MOBILE__){
 
-	$images = $config['site_gallery']->getCatByTitle('Home Images')->items;
+	$site_gallery = $loader->load(SITE_GALLERY_ID);
+
+	$images = $site_gallery->getCatByTitle('Home Images')->items;
 	
 	$obj = array( 'success' => true, 'images' => $images);
 

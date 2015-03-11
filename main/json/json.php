@@ -1,10 +1,11 @@
 <?php header('Content-type: application/json'); ?>
-<?php require_once("../../lib/php/detect_mobile.php"); ?>
 <?php require_once("../../lib/php/autoload.php"); ?>
 <?php require_once("../../lib/config.php"); ?>
 <?php require_once("../../lib/php/helpers.php"); ?>
 
 <?php
+
+	$loader = new Modiphy\Gallery\Loader();
 
 	$page = (string)url_get_param($_SERVER['REQUEST_URI'], 'page', 'not_found');
 	$type = (string)url_get_param($_SERVER['REQUEST_URI'], 'type', 'default');

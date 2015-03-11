@@ -1,7 +1,7 @@
 <?php
 
 $loader = new Modiphy\Gallery\Loader();
-$gallery = $loader->load($config['photo_gallery_id']);
+$gallery = $loader->load(PHOTO_GALLERY_ID);
 
 $images = $gallery->getCatByIndex(0)->items;
 
@@ -14,7 +14,7 @@ $images = $gallery->getCatByIndex(0)->items;
 		foreach ($images as $image) {
 
 			$image_url = $image->getImageUrl(0, 120);
-			$link = $config['direct_link'] . '?overlay=photo_gallery&id=' . $image->id;
+			$link = DIRECT_LINK . '?overlay=photo_gallery&id=' . $image->id;
 
 			echo <<<EOT
 				

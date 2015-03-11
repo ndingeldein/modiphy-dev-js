@@ -26,7 +26,7 @@ App = (function( App ){
 
 			this.pageTypes.add( new M.PageType('text', App.Views.DefaultPage) );
 			this.pageTypes.add( new M.PageType('intro', M.IntroPageView) );
-			this.pageTypes.add( new M.PageType('gallery_thumbs', M.GalleryThumbsPageView) );
+			
 			this.pageTypes.add( new M.PageType('photo_gallery', M.PhotoGalleryPageView) );
 
 			this.pageTypes.add( new M.PageType('home', App.Views.HomePage) );

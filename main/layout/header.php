@@ -3,7 +3,7 @@
 
 <?php
 
-$images = $config['site_gallery']->getCatByTitle('Nav')->items;
+$images = $site_gallery->getCatByTitle('Nav')->items;
 
 ?>
 
@@ -21,11 +21,11 @@ $images = $config['site_gallery']->getCatByTitle('Nav')->items;
 			<div class="bar"></div>
 		</a>
 
-		<?php if (!$config['isMobile']): ?>
+		<?php if (!__MOBILE__): ?>
 
 		<div class="nav-container">			
 		
-		<?php echo getMainNav($config['site_gallery'], $images, 'main-nav clearfix' ); ?>
+		<?php echo getMainNav($site_gallery, $images, 'main-nav clearfix' ); ?>
 		</div>
 			
 		<?php endif ?>
@@ -33,7 +33,7 @@ $images = $config['site_gallery']->getCatByTitle('Nav')->items;
 	</div>
 
 	<div class="mobile-nav-container">
-		<?php echo getMobileNav($config['site_gallery'], $images, 'mobile-nav' ); ?>
+		<?php echo getMobileNav($site_gallery, $images, 'mobile-nav' ); ?>
 	</div>
 
 </div>

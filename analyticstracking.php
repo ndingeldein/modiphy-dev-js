@@ -2,7 +2,7 @@
 
 require_once(dirname(__FILE__) . '/lib/config.php');
 
-$ua = $config['analytics_tracking_id'];
+$ua = ANALYTICS_TRACKING_ID;
 
 ?>
 
@@ -19,11 +19,11 @@ $ua = $config['analytics_tracking_id'];
 
 	(function() {
 
-		// $(window).on( 'hashchange', function(){
+		$(window).on( 'hashchange', function(){
 
-		// 	_gaq.push(['_trackPageview',location.pathname + location.search  + location.hash]);
+			_gaq.push(['_trackPageview',location.pathname + location.search  + location.hash]);
 
-		// });
+		});
 
 	})();
 

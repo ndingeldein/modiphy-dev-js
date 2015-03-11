@@ -1,8 +1,13 @@
-<?php require_once("../lib/php/detect_mobile.php"); ?>
 <?php require_once("../lib/php/autoload.php"); ?>
 <?php require_once("../lib/config.php"); ?>
-<?php require_once("../lib/php/gallery.php"); ?>
 <?php require_once("../lib/php/helpers.php"); ?>
+
+<?php
+
+$loader = new Modiphy\Gallery\Loader();
+$site_gallery = $loader->load(SITE_GALLERY_ID);
+
+?>
 
 <?php include('./layout/head.php'); ?>
 
@@ -35,10 +40,10 @@
 (function(){
 
 	var options = {
-		siteId: <?php echo $config['site_id']; ?>,
-		directLink: '<?php echo $config["direct_link"]; ?>',
-		root: '<?php echo $config["root"]; ?>',
-		isMobile: <?php echo $config["isMobile"]; ?>
+		siteId: <?php echo SITE_GALLERY_ID; ?>,
+		directLink: '<?php echo DIRECT_LINK; ?>',
+		root: '<?php echo PUSHSTATE_ROOT; ?>',
+		isMobile: <?php echo (__MOBILE__) ? 1 : 0; ?>
 	};
 	
 	App.start( options );

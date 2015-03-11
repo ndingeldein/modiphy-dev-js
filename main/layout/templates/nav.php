@@ -1,15 +1,14 @@
 <?php
 
 function getNav($images, $class){
-	global $config;
-
+	
 	$str = '<ul class="' . $class . '">';
 
 	foreach ($images as $image) {
 
-		$link = $image->getLinkUrl($config['direct_link'] . $image->field01);
+		$link = $image->getLinkUrl(DIRECT_LINK . $image->field01);
 		if(substr($link, 0, 1) == '?'){
-			$link = $config['direct_link'] . 'home' . $link;
+			$link = DIRECT_LINK . 'home' . $link;
 		}
 
 		$target = $image->getTarget('_self' );

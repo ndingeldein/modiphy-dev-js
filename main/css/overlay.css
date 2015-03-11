@@ -41,6 +41,7 @@
 .photo_gallery.page{
 
 	position: relative;
+	visibility: visible;
 	width: 100%;
 	height: 100%;
 

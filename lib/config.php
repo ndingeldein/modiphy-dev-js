@@ -1,36 +1,41 @@
+<?php require_once(__DIR__ . '/php/detect_mobile.php'); ?>
+
 <?php
 
-/*
-* An array that has properties pertaining to gallery manager galleries 
-* and per site information for use throughout site files and directories
-* HAS NOTHING TO DO WITH DB CONNECTION CREDENTIALS
-*/
+/* Flux account username */
+define("ACCOUNT_USERNAME", 'modiphy-dev-js');
 
-$config = array(
+/* Flux Gallery IDs */
+define('SITE_GALLERY_ID', 681);
+define('CLIENT_GALLERY_ID', 682);
+define('PHOTO_GALLERY_ID', 683);
 
-	'site_id' => 692,
-	'client_gallery_id' => 683,
-	'photo_gallery_id' => 683,
+/* Google Analytics ID */
+define('ANALYTICS_TRACKING_ID', 'UA-XXXXXXX-X');
 
-	'analytics_tracking_id' => 'UA-XXXXXXX-X',
+/* Path to public_html */
+define('PUBLIC_PATH', realpath(__DIR__ . '/../') . '/');
 
-	'sources_path' => 'main/sources/',
-	'direct_link' => 'http://dev.modiphy.com/main/'
-);
+/* Path to main */
+define('MAIN_PATH', realpath(__DIR__ . '/../') . '/main/');
 
-$config['og'] = array(
-	
-	'image_url' => $config['direct_link'] . 'images/og_image.jpg',
-	'title' => 'Website Title'
+/* Path to text editor sources path relative to public_html */
+define('SOURCES_PATH', realpath(__DIR__ . '/../') . '/main/sources/');
 
-);
+/**
 
-$config['isMobile'] = (isMobile()) ? 1 : 0;
+** DIRECT_LINK
 
-/*
-$config['root'] sets root path for Backbone history pushstate.
-This is necessary because it needs to be different for the local development and live domain environments.
-*/
-include(__DIR__ . '/php/root.php');
+* Sets a prefix for all html links
+
+* Prefix is prepended to internal site links for better SEO. Javascript delegates all links with this prefix to use pushstate.
+**/
+define('DIRECT_LINK', 'http://dev.modiphy.com/main/');
+
+/* Mobile Detection */
+define('__MOBILE__', isMobile());
+
+/* Development/Production related constants and variables*/
+require_once(__DIR__ . '/php/environment_settings.php');
 	
 ?>

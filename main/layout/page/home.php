@@ -2,7 +2,7 @@
 	
 	<div class="content">
 
-		
+		<h2>home content</h2>
 
 	</div>
 
@@ -14,7 +14,7 @@
 
 		<?php 
 
-			$category = $config['site_gallery']->getCatByTitle('Home Images');
+			$category = $site_gallery->getCatByTitle('Home Images');
 			$image_url = $category->getItemByIndex(0)->getImageUrl();
 			
 		?>

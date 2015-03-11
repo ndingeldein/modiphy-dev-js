@@ -2,7 +2,7 @@
 	
 	border-style: none;
 	color: #121212;
-	font-size: 0.875em;
+	font-size: 14px;
 	line-height: 1.5em;
 	font-weight: 400;
 
@@ -10,13 +10,13 @@
 
 .heading{
 	color:#e68f1a;
-	font-size: 2em;
+	font-size: 24px;
 	font-weight: 400;
 }
 
 .sub_heading{
 	color:#5a5a5a;
-	font-size: 1.25em;
+	font-size: 18px;
 	font-weight: 700;
 }
 

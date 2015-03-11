@@ -2,7 +2,7 @@
 
 	$page = currentPage();
 
-	$image = $config['site_gallery']->getItem('field01', $page);
+	$image = $site_gallery->getItem('field01', $page);
 	$page_title = str_replace('_', ' ', ucwords($page));
 
 	$layout = ( strlen($image->field04) ) ? $image->field04 : 'default';
