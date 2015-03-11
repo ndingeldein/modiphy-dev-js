@@ -11,4 +11,4 @@
 *
 **/
 
-define("__DEV__", FALSE);
+define("__DEV__", TRUE);
